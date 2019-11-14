@@ -1,15 +1,12 @@
-/**
- * import POKEMON from './data/pokemon/pokemon.js'
- * import LoL from './data/lol/lol.js'
- * import POTTER from './data/potter/potter.js'
- */
-
+import RICKANDMORTY from './data/rickandmorty/rickandmorty.js'
 import { example } from './data.js';
-
 console.log(example);
+console.log(RICKANDMORTY);
 
-/*
- * console.log(POKEMON);
- * console.log(LoL);
- * console.log(POTTER)
-*/
+
+document.getElementById("strtBtn").addEventListener("click", nextPage);
+
+const nextPage = () => {
+    document.getElementById("startPage").style.display = "none";
+    document.getElementById("characterPage").style.display = "block";
+}
