@@ -16,8 +16,8 @@ for (let personaje of RICKANDMORTY.results) {
             if (v.length === 41) {
                 return v.slice(-1)
             } else { return v.slice(-2) }
-
-        }); // <div class="personaje"><h1>Rick</h1><img src="rick.jpg"><img></div>
+        }) + "el id es " + personaje.id + "la especie es " +
+        personaje.species; // <div class="personaje"><h1>Rick</h1><img src="rick.jpg"><img></div>
 
     document.getElementById('characterGrid').appendChild(template);
 
