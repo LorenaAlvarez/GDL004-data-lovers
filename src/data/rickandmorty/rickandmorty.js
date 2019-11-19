@@ -22,6 +22,7 @@ export default {
             },
             image: "https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg",
             episode: [
+
                 "https://rickandmortyapi.com/api/episode/1",
                 "https://rickandmortyapi.com/api/episode/2",
                 "https://rickandmortyapi.com/api/episode/3",
