@@ -31,6 +31,7 @@ export default {
                 "https://rickandmortyapi.com/api/episode/7",
                 "https://rickandmortyapi.com/api/episode/8",
                 "https://rickandmortyapi.com/api/episode/9",
+                /*slice -2*/
                 "https://rickandmortyapi.com/api/episode/10",
                 "https://rickandmortyapi.com/api/episode/11",
                 "https://rickandmortyapi.com/api/episode/12",
