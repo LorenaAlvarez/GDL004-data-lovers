@@ -1,20 +1,33 @@
 import RICKANDMORTY from './data/rickandmorty/rickandmorty.js'
 console.log(RICKANDMORTY);
 
+let i = 1;
+for (let personaje of RICKANDMORTY.results) {
+    const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
+    template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>
 
-let arrEpisodes = RICKANDMORTY.results[0].episode;
-const episode = new Array(arrEpisodes.length)
-const episode2 = new Array(arrEpisodes.length)
 
-for (let i = 0; i < 9; i++) {
-    episode[i] = arrEpisodes[i].slice(-1)
+    // se agrega dentro del div un h1 con el nombre del personaje y se agrega la imagen con el src de la imagen del personaje
+    template.innerHTML = '<h1>' + personaje.name + '</h1><img src="'+ personaje.image +'">'; // <div class="personaje"><h1>Rick</h1><img src="rick.jpg"><img></div>
+     
+    document.getElementById('characterGrid').appendChild(template);
+
+    // Mosstrar solo los primeros 15
+    if (i === 15) {
+        break; // Se rompe el for
+    }
+
+    i++;
 }
-for (let i = 9; i < arrEpisodes.length; i++) {
-    episode2[i] = arrEpisodes[i].slice(-2)
-}
 
-document.getElementById("item1").innerHTML = ("Id: " + RICKANDMORTY.results[0].id + " ") +
+// document.getElementById('characterGrid').innerHTML = result;
+
+/* document.getElementById("item1").innerHTML = ("Id: " + RICKANDMORTY.results[0].id + " ") +
     ("Name: " + RICKANDMORTY.results[0].name + " ") +
     ("Status: " + RICKANDMORTY.results[0].status + " ") +
     ("Gender: " + RICKANDMORTY.results[0].gender + " ") +
-    ("Appears in episodes: " + episode + episode2);
+    ("Appears in episodes: " + RICKANDMORTY.results[0].episode[0].slice(-1) + " ") +
+    ("to " + RICKANDMORTY.results[0].episode[30].slice(-2)); */
+
+ 
+
