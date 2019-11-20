@@ -1,23 +1,25 @@
 import RICKANDMORTY from './data/rickandmorty/rickandmorty.js'
-console.log(RICKANDMORTY);
-
-let i = 1;
-for (let personaje of RICKANDMORTY.results) {
-    let personajeName = personaje.name;
-    console.log(personajeName);
-    let personajeEspecie = personaje.species;
-    console.log(personajeEspecie);
-    let personajeEpisode = personaje.episode.map(v => {
-        if (v.length === 41) {
-            return v.slice(-1)
-        } else { return v.slice(-2) }
-    });
-    console.log(personajeEpisode);
-
-    if (i === 15) {
-        break; // Se rompe el for
-    }
-    i++;
 
 
-}
+//SORT BY NAME
+let arr = RICKANDMORTY.results;
+const sortName = Array.from(arr).sort((a, b) => { if (a.name.toLowerCase() < b.name.toLowerCase()) return -1 });
+console.log(sortName);
+
+//SORT BY SPECIES
+const sortSp = Array.from(arr).sort((a, b) => { if (a.species.toLowerCase() < b.species.toLowerCase()) return -1 });
+console.log(sortSp);
+
+//SORT BY EPISODE
+const sortEp = Array.from(arr).sort((a, b) => {
+    if (a.episode.map(v => {
+            if (v.length === 41) {
+                return v.slice(-1)
+            } else { return v.slice(-2) }
+        }) < b.episode.map(v => {
+            if (v.length === 41) {
+                return v.slice(-1)
+            } else { return v.slice(-2) }
+        })) return -1
+});
+console.log(sortEp);

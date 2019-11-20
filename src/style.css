@@ -38,11 +38,11 @@ div.personaje img {
 
 div.personaje h1 {
     width: 10px;
-    display: flex;
     color: black;
     font-family: roboto;
     font-size: 20px;
     font-weight: bold;
+    text-align: right;
 }
 
 .container {
@@ -110,6 +110,7 @@ div.personaje h1 {
     font-size: 1em;
     position: relative;
     overflow: scroll;
+    background-size: cover;
 }
 
 .searchBtn {
