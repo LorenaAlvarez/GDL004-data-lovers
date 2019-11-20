@@ -6,9 +6,15 @@ let arr = RICKANDMORTY.results;
 const sortName = Array.from(arr).sort((a, b) => { if (a.name.toLowerCase() < b.name.toLowerCase()) return -1 });
 console.log(sortName);
 
+
+
 //SORT BY SPECIES
 const sortSp = Array.from(arr).sort((a, b) => { if (a.species.toLowerCase() < b.species.toLowerCase()) return -1 });
 console.log(sortSp);
+
+//SORT BY GENDER
+const sortGe = Array.from(arr).sort((a, b) => { if (a.gender.toLowerCase() < b.gender.toLowerCase()) return -1 });
+console.log(sortGe);
 
 //SORT BY EPISODE
 const sortEp = Array.from(arr).sort((a, b) => {
