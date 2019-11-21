@@ -32,7 +32,17 @@
             </a>
         </div>
         <div id="buttons">
-            <button class="filter">filter</button>
+            <div class="dropdown">
+                <button class="dropbtn">Sort By:</button>
+                <div class="dropdown-content">
+                    <a href="#">Gender</a>
+                    <a href="#">Species</a>
+                    <a href="#">Name</a>
+                    <a href="#">Episode</a>
+                </div>
+            </div>
+            <button id="showAll">Show All</button>
+
 
             <input type="image" src="https://i.ibb.co/sQQn2vB/50a6d66d1628e97f630846f158e5b7eb-simbolo-de-la-lupa.png" id="searchBtn" class="searchBtn">
             <input type="text" name="searchBar" id="searchBar"> <br>
@@ -42,25 +52,25 @@
             <button id="P">P</button><button id="Q">Q</button><button id="R">R</button><button id="S">S</button><button id="T">T</button>
             <button id="V">V</button><button id="W">W</button><button id="X">X</button><button id="Y">Y</button><button id="Z">Z</button>
         </div>
+    </div>
+    <div id="characterPage">
+        <div id="characterGrid"> </div>
+    </div>
 
-        <div id="characterPage">
-            <div id="characterGrid"> </div>
+
+    <div id=filteredPage>
+
+        <div id="filteredCharacterPage">
+            <div id="filteredCharacterGrid"> </div>
         </div>
+    </div>
 
+    <div id=sortedPage>
 
-        <div id=filteredPage>
-            <h1>Results</h1>
-            <div id="filteredCharacterPage">
-                <div id="filteredCharacterGrid"> </div>
-            </div>
+        <div id="sortedCharacterPage">
+            <div id="sortedCharacterGrid"> </div>
         </div>
-
-        <div id=sortedPage>
-            <h1>Results</h1>
-            <div id="sortedCharacterPage">
-                <div id="sortedCharacterGrid"> </div>
-            </div>
-        </div>
+    </div>
 
     </div>
 
