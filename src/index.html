@@ -16,7 +16,7 @@
     <div id="root">
 
         <div id="startPage">
-            <img id="logotipo" src="./imgs/logo.png" height="50px">
+            <img id="logotipo" src="./imgs/logo.png" height="100px">
             <h1 id="Welcome" class="titles">Welcome to the Rick and Morty Character Web</h1>
             <p id="about">Have you ever wondered in what chapter of the series does your favorite character appears? In this web, you’ll be able to find out! Click start to begin.</p>
 
@@ -37,43 +37,44 @@
             <div class="nav">
 
                 <input type="checkbox" id="menu" />
-                <label for="menu">Filter By:</label>
+                <label for="menu" id="nav-icon">&#9776;</label>
                 <div class="multi-level">
                     <div class="item">
                         <input type="checkbox" id="A" />
-                        <label for="A">Gender</label>
+                        <img src="imgs/arrow.png" class="arrow"><label for="A">Gender</label>
 
                         <ul>
-                            <li><a href="#">Female</a></li>
-                            <li><a href="#">Male</a></li>
+                            <li><a href="#" id="female">Female</a></li>
+                            <li><a href="#" id="male">Male</a></li>
+                            <li><a href="#" id="unks">Unknown</a></li>
                         </ul>
                     </div>
                     <div class="item">
                         <input type="checkbox" id="B" />
-                        <label for="B">Species</label>
+                        <img src="imgs/arrow.png" class="arrow"><label for="B">Species</label>
                         <ul>
-                            <li><a href="#" class="specie">Human</a></li>
-                            <li><a href="#" class="specie">Alien</a></li>
-                            <li><a href="#" class="specie">Humanoid</a></li>
-                            <li><a href="#" class="specie">Unknown</a></li>
-                            <li><a href="#" class="specie">PoopyButtHoles</a></li>
-                            <li><a href="#" class="specie">Mythologs</a></li>
-                            <li><a href="#" class="specie">Animals</a></li>
-                            <li><a href="#" class="specie">Vampires</a></li>
-                            <li><a href="#" class="specie">Robots</a></li>
-                            <li><a href="#" class="specie">Cronenbergs</a></li>
-                            <li><a href="#" class="specie">Diseases</a></li>
-                            <li><a href="#" class="specie">Parasites</a></li>
+                            <li><a href="#" id="human" class="species">Human</a></li>
+                            <li><a href="#" id="alien">Alien</a></li>
+                            <li><a href="#" id="humanoid">Humanoid</a></li>
+                            <li><a href="#" id="unknown">Unknown</a></li>
+                            <li><a href="#" id="poopys">PoopyButtHoles</a></li>
+                            <li><a href="#" id="mythologs">Mythologs</a></li>
+                            <li><a href="#" id="animals">Animals</a></li>
+                            <li><a href="#" id="vampires">Vampires</a></li>
+                            <li><a href="#" id="robots">Robots</a></li>
+                            <li><a href="#" id="cronenbergs">Cronenbergs</a></li>
+                            <li><a href="#" id="diseases">Diseases</a></li>
+                            <li><a href="#" id="parasites">Parasites</a></li>
                         </ul>
                     </div>
                     <div class="item">
                         <input type="checkbox" id="C" />
-                        <label for="C">Episode</label>
+                        <img src="imgs/arrow.png" class="arrow"><label for="C">Episode</label>
                         <ul>
                             <li>
                                 <div class="sub-item">
                                     <input type="checkbox" id="C-A" />
-                                    <label for="C-A">Season 1</label>
+                                    <img src="imgs/arrow.png" class="arrow"><label for="C-A">Season 1</label>
                                     <ul>
                                         <li><a href="#">Ep. 1</a></li>
                                         <li><a href="#">Ep. 2</a></li>
@@ -92,7 +93,7 @@
                             <li>
                                 <div class="sub-item">
                                     <input type="checkbox" id="C-B" />
-                                    <label for="C-B">Season 2</label>
+                                    <img src="imgs/arrow.png" class="arrow"> <label for="C-B">Season 2</label>
                                     <ul>
                                         <li><a href="#">Ep. 1</a></li>
                                         <li><a href="#">Ep. 2</a></li>
@@ -110,7 +111,7 @@
                             <li>
                                 <div class="sub-item">
                                     <input type="checkbox" id="C-C" />
-                                    <label for="C-C">Season 3</label>
+                                    <img src="imgs/arrow.png" class="arrow"> <label for="C-C">Season 3</label>
                                     <ul>
                                         <li><a href="#">Ep. 1</a></li>
                                         <li><a href="#">Ep. 2</a></li>
@@ -129,14 +130,16 @@
 
 
                     </div>
-
-
+                    <div class="item">
+                        <input type="checkbox" id="D" />
+                        <img src="imgs/morty.png" class="eyes"><label for="D">Show All</label>
+                    </div>
 
                 </div>
             </div>
 
 
-            <button id="showAll">Show All</button>
+
             <input type="image" src="https://i.ibb.co/sQQn2vB/50a6d66d1628e97f630846f158e5b7eb-simbolo-de-la-lupa.png" id="searchBtn" class="searchBtn"> <input type="text" name="searchBar" id="searchBar"> <br>
             <div id="abc">
                 <button id="A" class="abc">A</button><button id="B" class="abc">B</button><button id="C" class="abc">C</button><button id="D" class="abc">D</button><button id="E" class="abc">E</button>

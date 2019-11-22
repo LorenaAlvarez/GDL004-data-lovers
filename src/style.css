@@ -47,6 +47,7 @@ body {
 
 .abc:hover {
     color: fuchsia;
+    cursor: pointer;
 }
 
 #characterPage {
@@ -182,45 +183,111 @@ body {
 
 /*DROPDOWN STYLE*/
 
-.dropbtn {
-    background-color: #8DC042;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    font-family: roboto;
-    border: none;
-}
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+/*funcionalidad*/
 
-.dropdown-content {
+.multi-level,
+.item ul,
+.nav input[type="checkbox"] {
     display: none;
-    position: absolute;
-    background-color: white;
-    font-family: roboto;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+#menu:checked~.multi-level,
+.item input:checked~ul {
+    display: block;
+}
+
+
+/*arrow*/
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    float: left;
+    z-index: 0;
+}
+
+.item input+.arrow {
+    transform: rotate(-90deg);
+    transition: 0.1s;
+}
+
+.item input:checked+.arrow {
+    transform: rotate(0deg);
+    transition: 0.1s;
+}
+
+.eyes {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    float: left;
+    z-index: 0;
+}
+
+.item input+.eyes {
+    transform: rotate(0deg);
+    transition: 0.1s;
+}
+
+.item input:checked+.eyes {
+    transform: rotate(-90deg);
+    transition: 0.1s;
+}
+
+
+/*styles*/
+
+label:hover {
+    cursor: pointer;
+}
+
+label {
+    width: 100%;
+    display: block;
+    z-index: 3;
+    position: relative;
+}
+
+.nav {
+    width: auto;
+    background-color: lightcyan;
+    overflow-x: hidden;
+    border-bottom: 1px solid #CFD8DC;
+}
+
+#nav-icon {
+    font-size: 28px;
+    line-height: 50px;
+    padding-left: 1em;
+    color: white;
+    background-color: lightcoral;
+}
+
+.nav ul,
+.nav li,
+label {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 2em;
+    list-style: none;
     text-decoration: none;
-    display: block;
+    color: #90A4AE;
+    font-weight: 100;
+    width: 100%;
 }
 
-.dropdown-content a:hover {
-    background-color: white;
+.item ul {
+    padding: 0 0.25em;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #8DC042;
+.nav li a {
+    line-height: 50px;
+    margin: 0;
+    padding: 0 1em;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
 }

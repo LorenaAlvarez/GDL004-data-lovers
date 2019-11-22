@@ -13,7 +13,7 @@ window.manager = {
 }
 
 
-//FILTER
+//FILTER SPECIES
 const humans = RICKANDMORTY.results.filter((human) => human.species === "Human");
 const aliens = RICKANDMORTY.results.filter((alien) => alien.species === "Alien");
 const humanoids = RICKANDMORTY.results.filter((humanoid) => humanoid.species === "Humanoid");
@@ -26,7 +26,11 @@ const robots = RICKANDMORTY.results.filter((robot) => robot.species === "Robot")
 const cronenbergs = RICKANDMORTY.results.filter((cronenberg) => cronenberg.species === "Cronenberg");
 const diseases = RICKANDMORTY.results.filter((disease) => disease.species === "Disease");
 const parasites = RICKANDMORTY.results.filter((parasite) => parasite.species === "Parasite");
+//FILTER GENDER
 
+const females = RICKANDMORTY.results.filter((female) => female.gender === "Female");
+const males = RICKANDMORTY.results.filter((male) => male.gender === "Male");
+const unks = RICKANDMORTY.results.filter((unk) => unk.gender === "unknown");
 
 export {
     humans,
@@ -40,7 +44,10 @@ export {
     robots,
     cronenbergs,
     diseases,
-    parasites
+    parasites,
+    females,
+    males,
+    unks
 }
 
 //SORT BY NAME
