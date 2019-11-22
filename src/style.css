@@ -1,4 +1,37 @@
+ #startPage {
+    min-height: 100vh;
+    background: blue;
+    text-align: center;
+}
+
 #characterPage {
+    min-height: 100vh;
+    background: rgb(255, 0, 140);
+}
+
+#ButtonStart {
+    width: 200px;
+    height: 200px;
+    font-size: 24px;
+    border-radius: 50%;
+    display: inline;
+    justify-content: flex-end;
+}
+
+.searchBtn {
+    height: 2em;
+    width: 2em;
+    display: inline;
+    justify-content: flex-end;
+}
+
+.abc {
+    background-color:transparent;
+    border-radius:1px;
+    border:1px solid rgb(255, 255, 255);  
+    display: inline;
+}  
+/*  #characterPage {
     display: none;
 }
 
@@ -36,21 +69,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 20em;
-}
-
-div.personaje img {
-    width: 180px;
-    display: flex;
-    flex-direction: row;
-}
-
-div.personaje h1 {
-    width: 10px;
-    color: black;
-    font-family: roboto;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: right;
 }
 
 .container {
@@ -144,4 +162,4 @@ div.personaje h1 {
     background-image: linear-gradient(to right, blue, orange);
     width: 15em;
     height: 2em;
-}
+}    */
