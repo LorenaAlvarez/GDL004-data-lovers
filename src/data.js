@@ -61,6 +61,9 @@ const sortSp = Array.from(arr).sort((a, b) => { if (a.species.toLowerCase() < b.
 //SORT BY GENDER
 const sortGe = Array.from(arr).sort((a, b) => { if (a.gender.toLowerCase() < b.gender.toLowerCase()) return -1 });
 
+//SORT BY ID
+const sortID = Array.from(arr).sort((a, b) => { if (a.id < b.id) return -1 });
+
 //SORT BY EPISODE
 const sortEp = Array.from(arr).sort((a, b) => {
     if (a.episode.map(v => {
@@ -95,5 +98,6 @@ export {
     sortName,
     sortGe,
     sortSp,
-    sortEp
+    sortEp,
+    sortID
 }

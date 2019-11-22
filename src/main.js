@@ -19,7 +19,8 @@ import {
     sortEp,
     sortGe,
     sortSp,
-    sortName
+    sortName,
+    sortID
 } from './data.js'
 
 //To show search bar
@@ -518,6 +519,27 @@ document.getElementById("sortGend").addEventListener("click", function() {
 
 document.getElementById("sortEp").addEventListener("click", function() {
     let resultados = (sortEp);
+    document.getElementById("characterGrid").innerHTML = ""
+
+    for (let personaje of resultados) {
+        const template = document.createElement('div');
+        template.classList.add('personaje')
+        template.innerHTML = '<h1>' + "Name: " + personaje.name +
+            '<br>' + " Appears in episode " +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+
+        document.getElementById('characterGrid').appendChild(template);
+    }
+})
+
+//FUNCTION SORT BY ID!!
+
+document.getElementById("sortID").addEventListener("click", function() {
+    let resultados = (sortID);
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
