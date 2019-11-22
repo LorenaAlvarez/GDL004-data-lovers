@@ -15,7 +15,33 @@ window.manager = {
 
 //FILTER
 const humans = RICKANDMORTY.results.filter((human) => human.species === "Human");
-console.log(humans);
+const aliens = RICKANDMORTY.results.filter((alien) => alien.species === "Alien");
+const humanoids = RICKANDMORTY.results.filter((humanoid) => humanoid.species === "Humanoid");
+const unknowns = RICKANDMORTY.results.filter((unknown) => unknown.species === "unknown");
+const poopys = RICKANDMORTY.results.filter((poopy) => poopy.species === "Poopybutthole");
+const mythologs = RICKANDMORTY.results.filter((mytholog) => mytholog.species === "Mytholog");
+const animals = RICKANDMORTY.results.filter((animal) => animal.species === "Animal");
+const vampires = RICKANDMORTY.results.filter((vampire) => vampire.species === "Vampire");
+const robots = RICKANDMORTY.results.filter((robot) => robot.species === "Robot");
+const cronenbergs = RICKANDMORTY.results.filter((cronenberg) => cronenberg.species === "Cronenberg");
+const diseases = RICKANDMORTY.results.filter((disease) => disease.species === "Disease");
+const parasites = RICKANDMORTY.results.filter((parasite) => parasite.species === "Parasite");
+
+
+export {
+    humans,
+    aliens,
+    humanoids,
+    unknowns,
+    poopys,
+    mythologs,
+    animals,
+    vampires,
+    robots,
+    cronenbergs,
+    diseases,
+    parasites
+}
 
 //SORT BY NAME
 /* let arr = RICKANDMORTY.results;
