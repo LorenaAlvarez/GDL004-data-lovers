@@ -19,7 +19,6 @@ const sortName = Array.from(arr).sort((a, b) => { if (a.name.toLowerCase() < b.n
 console.log(sortName);
 
 
-
 //SORT BY SPECIES
 const sortSp = Array.from(arr).sort((a, b) => { if (a.species.toLowerCase() < b.species.toLowerCase()) return -1 });
 console.log(sortSp);
@@ -29,7 +28,7 @@ const sortGe = Array.from(arr).sort((a, b) => { if (a.gender.toLowerCase() < b.g
 console.log(sortGe);
 
 //SORT BY EPISODE
-const sortEp = Array.from(arr).sort((a, b) => {
+/* const sortEp = Array.from(arr).sort((a, b) => {
     if (a.episode.map(v => {
             if (v.length === 41) {
                 return v.slice(-1)
