@@ -1,8 +1,20 @@
-import RICKANDMORTY from './data/rickandmorty/rickandmorty.js'
-
+window.manager = {
+    filterData (data, condition) {
+        if (condition === "filtroLetras") {
+            /*  alert(); */
+            console.log(data)
+            let result = data.data.results.filter(character => {
+                let letraFiltro = character.name.slice(0,1)
+                return letraFiltro === data.letraFiltro.toUpperCase()
+            });
+            console.log(result)
+            return result
+        }
+    }
+}
 
 //SORT BY NAME
-let arr = RICKANDMORTY.results;
+/* let arr = RICKANDMORTY.results;
 const sortName = Array.from(arr).sort((a, b) => { if (a.name.toLowerCase() < b.name.toLowerCase()) return -1 });
 console.log(sortName);
 
