@@ -14,23 +14,24 @@ window.manager = {
 
 
 //FILTER SPECIES
-const humans = RICKANDMORTY.results.filter((human) => human.species === "Human");
 const aliens = RICKANDMORTY.results.filter((alien) => alien.species === "Alien");
-const humanoids = RICKANDMORTY.results.filter((humanoid) => humanoid.species === "Humanoid");
-const unknowns = RICKANDMORTY.results.filter((unknown) => unknown.species === "unknown");
-const poopys = RICKANDMORTY.results.filter((poopy) => poopy.species === "Poopybutthole");
-const mythologs = RICKANDMORTY.results.filter((mytholog) => mytholog.species === "Mytholog");
 const animals = RICKANDMORTY.results.filter((animal) => animal.species === "Animal");
-const vampires = RICKANDMORTY.results.filter((vampire) => vampire.species === "Vampire");
-const robots = RICKANDMORTY.results.filter((robot) => robot.species === "Robot");
 const cronenbergs = RICKANDMORTY.results.filter((cronenberg) => cronenberg.species === "Cronenberg");
 const diseases = RICKANDMORTY.results.filter((disease) => disease.species === "Disease");
+const humans = RICKANDMORTY.results.filter((human) => human.species === "Human");
+const humanoids = RICKANDMORTY.results.filter((humanoid) => humanoid.species === "Humanoid");
+const mythologs = RICKANDMORTY.results.filter((mytholog) => mytholog.species === "Mytholog");
 const parasites = RICKANDMORTY.results.filter((parasite) => parasite.species === "Parasite");
+const poopys = RICKANDMORTY.results.filter((poopy) => poopy.species === "Poopybutthole");
+const robots = RICKANDMORTY.results.filter((robot) => robot.species === "Robot");
+const unknowns = RICKANDMORTY.results.filter((unknown) => unknown.species === "unknown");
+const vampires = RICKANDMORTY.results.filter((vampire) => vampire.species === "Vampire");
 //FILTER GENDER
 
 const females = RICKANDMORTY.results.filter((female) => female.gender === "Female");
 const males = RICKANDMORTY.results.filter((male) => male.gender === "Male");
 const unks = RICKANDMORTY.results.filter((unk) => unk.gender === "unknown");
+
 
 export {
     humans,
