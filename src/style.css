@@ -1,4 +1,14 @@
- #startPage {
+body {
+    /*background-image: url(https://i.ibb.co/YyWD79D/rick-morty.jpg);
+    background-color: #27401D;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    font-family: 'Roboto', sans-serif;
+}
+
+#startPage {
     min-height: 100vh;
     background: blue;
     text-align: center;
@@ -14,24 +24,32 @@
     height: 200px;
     font-size: 24px;
     border-radius: 50%;
-    display: inline;
     justify-content: flex-end;
 }
 
 .searchBtn {
     height: 2em;
     width: 2em;
-    display: inline;
     justify-content: flex-end;
 }
 
 .abc {
-    background-color:transparent;
-    border-radius:1px;
-    border:1px solid rgb(255, 255, 255);  
-    display: inline;
-}  
-/*  #characterPage {
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 1.5em;
+}
+
+#abc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abc:hover {
+    color: fuchsia;
+}
+
+#characterPage {
     display: none;
 }
 
@@ -39,16 +57,8 @@
     display: none;
 }
 
-body {
-    background-image: url(https://i.ibb.co/YyWD79D/rick-morty.jpg);
-    background-color: #27401D;
-    background-attachment: fixed;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Roboto', sans-serif;
-}
 
+/*
 .titles {
     font-size: 2em;
     color: #27401D;
@@ -63,6 +73,7 @@ body {
     text-align: center;
     background-color: #27401D;
 }
+*/
 
 .strtBtn {
     display: block;
@@ -140,31 +151,25 @@ body {
 }
 
 .searchBtn {
+    display: flex;
+    float: right;
     height: 3em;
     width: 3em;
 }
 
-.filter {
-    height: 3em;
-    width: 8em;
-    font-size: 1em;
-    border-radius: 20%;
-}
-
 #searchBar {
     display: flex;
+    float: right;
     font-size: 1em;
     color: black;
     font-style: italic;
     font-weight: bold;
     font-family: roboto;
     text-transform: capitalize;
-    background-image: linear-gradient(to right, blue, orange);
+    background-color: pink;
     width: 15em;
     height: 2em;
-
-}    
-
+}
 
 #showAll {
     background-color: #8DC042;
@@ -182,6 +187,7 @@ body {
     color: white;
     padding: 16px;
     font-size: 16px;
+    font-family: roboto;
     border: none;
 }
 
@@ -194,6 +200,7 @@ body {
     display: none;
     position: absolute;
     background-color: white;
+    font-family: roboto;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -217,4 +224,3 @@ body {
 .dropdown:hover .dropbtn {
     background-color: #8DC042;
 }
-

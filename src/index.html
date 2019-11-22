@@ -12,44 +12,53 @@
 </head>
 
 <body>
- 
- <div id="root">
 
-    <div id="startPage">
-        <img id="logotipo" src="./imgs/logo.png" width"50px" height="50px">
-        <h1 id="Welcome" class="titles">Welcome to the Rick and Morty Character Web</h1>
-        <p id="about">Have you ever wondered in what chapter of the series does your favorite character appears? In this web, you’ll be able to find out! Click start to begin.</p>
-        
+    <div id="root">
+
+        <div id="startPage">
+            <img id="logotipo" src="./imgs/logo.png" width "50px" height="50px">
+            <h1 id="Welcome" class="titles">Welcome to the Rick and Morty Character Web</h1>
+            <p id="about">Have you ever wondered in what chapter of the series does your favorite character appears? In this web, you’ll be able to find out! Click start to begin.</p>
+
             <a href="#characterPage"></a>
-                     
-        <div id="buttonStrt">
-        <div class="container" id="container">
-            <input type="image" src="https://icon-library.net/images/rick-and-morty-icon/rick-and-morty-icon-15.jpg" id="StrtBtn" class="strtBtn">
-                <div class="overlay">
-                    <div class="text">Start</div>
-                        </div>
+
+            <div id="buttonStrt">
+                <div class="container" id="container">
+                    <input type="image" src="https://icon-library.net/images/rick-and-morty-icon/rick-and-morty-icon-15.jpg" id="StrtBtn" class="strtBtn">
+                    <div class="overlay">
+                        <div class="text">Start</div>
                     </div>
                 </div>
+            </div>
             </a>
+        </div>
+        <div id="buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Filter By:</button>
+                <div class="dropdown-content">
+                    <a href="#">Gender</a>
+                    <a href="#">Species</a>
+                    <a href="#">Name</a>
+                    <a href="#">Episode</a>
                 </div>
-                <div id="buttons">
-                    <button class="filter">filter</button>
-                    <input type="image" src="https://image.flaticon.com/icons/svg/116/116836.svg" id="searchBtn" class="searchBtn">
-                    <input type="text" name="searchBar" id="searchBar">  <br>  
+            </div>
+            <button id="showAll">Show All</button>
+            <input type="image" src="https://i.ibb.co/sQQn2vB/50a6d66d1628e97f630846f158e5b7eb-simbolo-de-la-lupa.png" id="searchBtn" class="searchBtn"> <input type="text" name="searchBar" id="searchBar"> <br>
+            <div id="abc">
+                <button id="A" class="abc">A</button><button id="B" class="abc">B</button><button id="C" class="abc">C</button><button id="D" class="abc">D</button><button id="E" class="abc">E</button>
+                <button id="F" class="abc">F</button><button id="G" class="abc">G</button><button id="H" class="abc">H</button><button id="I" class="abc">I</button><button id="J" class="abc">J</button>
+                <button id="K" class="abc">K</button><button id="L" class="abc">L</button><button id="M" class="abc">M</button><button id="N" class="abc">N</button><button id="O" class="abc">O</button>
+                <button id="P" class="abc">P</button><button id="Q" class="abc">Q</button><button id="R" class="abc">R</button><button id="S" class="abc">S</button><button id="T" class="abc">T</button>
+                <button id="V" class="abc">V</button><button id="W" class="abc">W</button><button id="X" class="abc">X</button><button id="Y" class="abc">Y</button><button id="Z" class="abc">Z</button>
+            </div>
+        </div>
 
-                    <button id="A" class="abc">A</button><button id="B" class="abc">B</button><button id="C" class="abc">C</button><button id="D" class="abc">D</button><button id="E" class="abc">E</button>
-                    <button id="F" class="abc">F</button><button id="G" class="abc">G</button><button id="H" class="abc">H</button><button id="I" class="abc">I</button><button id="J" class="abc">J</button>
-                    <button id="K" class="abc">K</button><button id="L" class="abc">L</button><button id="M" class="abc">M</button><button id="N" class="abc">N</button><button id="O" class="abc">O</button>
-                    <button id="P" class="abc">P</button><button id="Q" class="abc">Q</button><button id="R" class="abc">R</button><button id="S" class="abc">S</button><button id="T" class="abc">T</button>
-                    <button id="V" class="abc">V</button><button id="W" class="abc">W</button><button id="X" class="abc">X</button><button id="Y" class="abc">Y</button><button id="Z" class="abc">Z</button>
-                </div>
-        
-                <div id="characterPage">
-                    <div id="characterGrid"> </div>
-                </div>
-        
-        
-                <!-- <div id=filteredPage>
+        <div id="characterPage">
+            <div id="characterGrid"> </div>
+        </div>
+
+
+        <!-- <div id=filteredPage>
                     <h1>Results</h1>
                     <div id="filteredCharacterPage">
                         <div id="filteredCharacterGrid"> </div>
@@ -62,12 +71,12 @@
                         <div id="sortedCharacterGrid"> </div>
                     </div>
                 </div> -->
-        
-            </div>  
 
-                    
-       
-  <!-- <div id="root">
+    </div>
+
+
+
+    <!-- <div id="root">
 
 
         <div id="startPage">
@@ -128,7 +137,7 @@
     </div>
 
     </div>  -->
- 
+
     <script type="module" src="data.js"></script>
     <script type="module" src="main.js"></script>
 </body>

@@ -1,17 +1,21 @@
+import RICKANDMORTY from './data/rickandmorty/rickandmorty.js'
+
 window.manager = {
-    filterData (data, condition) {
+    filterData(data, condition) {
         if (condition === "filtroLetras") {
-            /*  alert(); */
-            console.log(data)
             let result = data.data.results.filter(character => {
-                let letraFiltro = character.name.slice(0,1)
+                let letraFiltro = character.name.slice(0, 1)
                 return letraFiltro === data.letraFiltro.toUpperCase()
             });
-            console.log(result)
             return result
         }
     }
 }
+
+
+//FILTER
+const humans = RICKANDMORTY.results.filter((human) => human.species === "Human");
+console.log(humans);
 
 //SORT BY NAME
 /* let arr = RICKANDMORTY.results;
@@ -39,4 +43,11 @@ console.log(sortGe);
             } else { return v.slice(-2) }
         })) return -1
 });
-console.log(sortEp); */
+console.log(sortEp); 
+
+
+
+
+
+
+*/
