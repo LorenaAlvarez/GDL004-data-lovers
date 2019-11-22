@@ -27,10 +27,52 @@ const robots = RICKANDMORTY.results.filter((robot) => robot.species === "Robot")
 const unknowns = RICKANDMORTY.results.filter((unknown) => unknown.species === "unknown");
 const vampires = RICKANDMORTY.results.filter((vampire) => vampire.species === "Vampire");
 //FILTER GENDER
-
 const females = RICKANDMORTY.results.filter((female) => female.gender === "Female");
 const males = RICKANDMORTY.results.filter((male) => male.gender === "Male");
 const unks = RICKANDMORTY.results.filter((unk) => unk.gender === "unknown");
+
+//FILTER EPISODE
+
+// Con esta función, logro que aparezcan los personajes que exclusiva y unicamente aparecen en el episodio 1, si el personaje 
+// aparece en varios capitulos además del 1, no lo muestra.
+
+const episode1 = RICKANDMORTY.results.filter((ep1) => ep1.episode.map(v => {
+    if (v.length === 41) {
+        return v.slice(-1)
+    } else { return v.slice(-2) }
+}) == 1);
+
+console.log(episode1);
+
+
+
+
+
+//SORT BY NAME
+let arr = RICKANDMORTY.results;
+const sortName = Array.from(arr).sort((a, b) => { if (a.name.toLowerCase() < b.name.toLowerCase()) return -1 });
+
+
+
+//SORT BY SPECIES
+const sortSp = Array.from(arr).sort((a, b) => { if (a.species.toLowerCase() < b.species.toLowerCase()) return -1 });
+
+
+//SORT BY GENDER
+const sortGe = Array.from(arr).sort((a, b) => { if (a.gender.toLowerCase() < b.gender.toLowerCase()) return -1 });
+
+//SORT BY EPISODE
+const sortEp = Array.from(arr).sort((a, b) => {
+    if (a.episode.map(v => {
+            if (v.length === 41) {
+                return v.slice(-1)
+            } else { return v.slice(-2) }
+        }) < b.episode.map(v => {
+            if (v.length === 41) {
+                return v.slice(-1)
+            } else { return v.slice(-2) }
+        })) return -1
+});
 
 
 export {
@@ -48,40 +90,10 @@ export {
     parasites,
     females,
     males,
-    unks
+    unks,
+    episode1,
+    sortName,
+    sortGe,
+    sortSp,
+    sortEp
 }
-
-//SORT BY NAME
-/* let arr = RICKANDMORTY.results;
-const sortName = Array.from(arr).sort((a, b) => { if (a.name.toLowerCase() < b.name.toLowerCase()) return -1 });
-console.log(sortName);
-
-
-//SORT BY SPECIES
-const sortSp = Array.from(arr).sort((a, b) => { if (a.species.toLowerCase() < b.species.toLowerCase()) return -1 });
-console.log(sortSp);
-
-//SORT BY GENDER
-const sortGe = Array.from(arr).sort((a, b) => { if (a.gender.toLowerCase() < b.gender.toLowerCase()) return -1 });
-console.log(sortGe);
-
-//SORT BY EPISODE
-/* const sortEp = Array.from(arr).sort((a, b) => {
-    if (a.episode.map(v => {
-            if (v.length === 41) {
-                return v.slice(-1)
-            } else { return v.slice(-2) }
-        }) < b.episode.map(v => {
-            if (v.length === 41) {
-                return v.slice(-1)
-            } else { return v.slice(-2) }
-        })) return -1
-});
-console.log(sortEp); 
-
-
-
-
-
-
-*/

@@ -251,18 +251,19 @@ label {
 }
 
 .nav {
-    width: auto;
-    background-color: lightcyan;
+    width: 10em;
+    background-color: transparent;
     overflow-x: hidden;
     border-bottom: 1px solid #CFD8DC;
+    border: transparent;
+    display: inline;
 }
 
 #nav-icon {
     font-size: 28px;
     line-height: 50px;
     padding-left: 1em;
-    color: white;
-    background-color: lightcoral;
+    color: black;
 }
 
 .nav ul,

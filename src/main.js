@@ -14,7 +14,12 @@ import {
     parasites,
     females,
     males,
-    unks
+    unks,
+    episode1,
+    sortEp,
+    sortGe,
+    sortSp,
+    sortName
 } from './data.js'
 
 //To show search bar
@@ -28,15 +33,15 @@ document.getElementById("searchBtn").addEventListener("click", function() {
 //SHOW ALL
 const showAll = () => {
     for (let personaje of RICKANDMORTY.results) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje');
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
         document.getElementById('characterGrid').appendChild(template);
 
     }
@@ -56,15 +61,15 @@ document.getElementById("container").addEventListener("click", function() {
 
 let i = 1;
 for (let personaje of RICKANDMORTY.results) {
-    const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-    template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+    const template = document.createElement('div');
+    template.classList.add('personaje');
     template.innerHTML = '<h1>' + "Name: " + personaje.name +
         '<br>' + " Appears in episode " +
         personaje.episode.map(v => {
             if (v.length === 41) {
                 return v.slice(-1)
             } else { return v.slice(-2) }
-        }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+        }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
     document.getElementById('characterGrid').appendChild(template);
 
@@ -88,15 +93,15 @@ for (let i = 0; i < abc.length; i++) {
         document.getElementById("characterGrid").innerHTML = ""
 
         for (let personaje of resultados) {
-            const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-            template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+            const template = document.createElement('div');
+            template.classList.add('personaje');
             template.innerHTML = '<h1>' + "Name: " + personaje.name +
                 '<br>' + " Appears in episode " +
                 personaje.episode.map(v => {
                     if (v.length === 41) {
                         return v.slice(-1)
                     } else { return v.slice(-2) }
-                }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+                }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
             document.getElementById('characterGrid').appendChild(template);
         }
@@ -113,15 +118,15 @@ document.getElementById("aliens").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje');
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -135,15 +140,15 @@ document.getElementById("animals").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -156,15 +161,15 @@ document.getElementById("cronenbergs").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -177,15 +182,15 @@ document.getElementById("diseases").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -198,15 +203,15 @@ document.getElementById("human").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -219,15 +224,15 @@ document.getElementById("humanoids").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -240,15 +245,15 @@ document.getElementById("mythologs").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -261,15 +266,15 @@ document.getElementById("parasites").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -282,15 +287,15 @@ document.getElementById("poopys").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -303,15 +308,15 @@ document.getElementById("robots").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -324,15 +329,15 @@ document.getElementById("unknowns").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -345,15 +350,15 @@ document.getElementById("vampires").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
                 } else { return v.slice(-2) }
-            }) + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
 
         document.getElementById('characterGrid').appendChild(template);
     }
@@ -366,8 +371,8 @@ document.getElementById("females").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
@@ -387,8 +392,8 @@ document.getElementById("males").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
@@ -408,8 +413,116 @@ document.getElementById("unks").addEventListener("click", function() {
     document.getElementById("characterGrid").innerHTML = ""
 
     for (let personaje of resultados) {
-        const template = document.createElement('div'); // se crea un elemento html div dentro de la variable template: <div></div>
-        template.classList.add('personaje') //  se agrega la clase personaje al div creado; <div class="personaje"></div>ersonaje
+        const template = document.createElement('div');
+        template.classList.add('personaje')
+        template.innerHTML = '<h1>' + "Name: " + personaje.name +
+            '<br>' + " Appears in episode " +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+
+        document.getElementById('characterGrid').appendChild(template);
+    }
+})
+
+//FUNCTION FILTER BY EPISODE -- EP1!!
+
+// Con esta función, logro que aparezcan los personajes que exclusiva y unicamente aparecen en el episodio 1, si el personaje 
+// aparece en varios capitulos además del 1, no lo muestra.
+
+document.getElementById("ep1").addEventListener("click", function() {
+    let resultados = (episode1);
+    document.getElementById("characterGrid").innerHTML = ""
+
+    for (let personaje of resultados) {
+        const template = document.createElement('div');
+        template.classList.add('personaje')
+        template.innerHTML = '<h1>' + "Name: " + personaje.name +
+            '<br>' + " Appears in episode " +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+
+        document.getElementById('characterGrid').appendChild(template);
+    }
+})
+
+//FUNCTION SORT BY NAME!!
+
+document.getElementById("sortName").addEventListener("click", function() {
+    let resultados = (sortName);
+    document.getElementById("characterGrid").innerHTML = ""
+
+    for (let personaje of resultados) {
+        const template = document.createElement('div');
+        template.classList.add('personaje')
+        template.innerHTML = '<h1>' + "Name: " + personaje.name +
+            '<br>' + " Appears in episode " +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+
+        document.getElementById('characterGrid').appendChild(template);
+    }
+})
+
+//FUNCTION SORT BY SPECIES!!
+
+document.getElementById("sortSpe").addEventListener("click", function() {
+    let resultados = (sortSp);
+    document.getElementById("characterGrid").innerHTML = ""
+
+    for (let personaje of resultados) {
+        const template = document.createElement('div');
+        template.classList.add('personaje')
+        template.innerHTML = '<h1>' + "Name: " + personaje.name +
+            '<br>' + " Appears in episode " +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+
+        document.getElementById('characterGrid').appendChild(template);
+    }
+})
+
+//FUNCTION SORT BY GENDER!!
+
+document.getElementById("sortGend").addEventListener("click", function() {
+    let resultados = (sortGe);
+    document.getElementById("characterGrid").innerHTML = ""
+
+    for (let personaje of resultados) {
+        const template = document.createElement('div');
+        template.classList.add('personaje')
+        template.innerHTML = '<h1>' + "Name: " + personaje.name +
+            '<br>' + " Appears in episode " +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
+
+        document.getElementById('characterGrid').appendChild(template);
+    }
+})
+
+//FUNCTION SORT BY EPISODE!!
+
+document.getElementById("sortEp").addEventListener("click", function() {
+    let resultados = (sortEp);
+    document.getElementById("characterGrid").innerHTML = ""
+
+    for (let personaje of resultados) {
+        const template = document.createElement('div');
+        template.classList.add('personaje')
         template.innerHTML = '<h1>' + "Name: " + personaje.name +
             '<br>' + " Appears in episode " +
             personaje.episode.map(v => {
