@@ -1,22 +1,40 @@
+/*COLORES A UTILIZAR
+AMARILLO  #F1E346
+VERDE OSCURO   #27401D
+VERDE CLARO    #8DC042
+AZUL   #87C1E2
+ROSA    #F2BEA0
+*/
+
 body {
-    /*background-image: url(https://i.ibb.co/YyWD79D/rick-morty.jpg);
-    background-color: #27401D;
+    background-image: url(https://ramenswag.com/wp-content/uploads/2019/03/Rick-Morty-Wallpaper-Dump-_-Album-on-Imgur.png);
+    /*     background-image: url(https://wallpaperaccess.com/full/637720.png);
+ */
+    background-color: black;
     background-attachment: fixed;
     background-position-x: center;
     background-repeat: no-repeat;
-    background-size: cover;*/
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
 
 #startPage {
     min-height: 100vh;
-    background: blue;
     text-align: center;
+}
+
+#logotipo {
+    opacity: 0.8;
+    height: 18em;
+}
+
+#logotipo:hover {
+    opacity: 1;
 }
 
 #characterPage {
     min-height: 100vh;
-    background: rgb(255, 0, 140);
+    background-color: white;
 }
 
 #ButtonStart {
@@ -33,9 +51,9 @@ body {
     justify-content: flex-end;
 }
 
-.abc {
+.letras {
     background-color: transparent;
-    border: 1px solid rgb(255, 255, 255);
+    border: transparent;
     font-size: 1.5em;
 }
 
@@ -58,23 +76,28 @@ body {
     display: none;
 }
 
-
-/*
 .titles {
     font-size: 2em;
-    color: #27401D;
+    color: #F2BEA0;
     text-align: center;
-    background-color: #F2BEA0;
     background-blend-mode: lighten;
+    opacity: 0.4;
 }
 
 #about {
     font-size: 1em;
     color: #F1E346;
     text-align: center;
-    background-color: #27401D;
+    opacity: 0.4;
 }
-*/
+
+.titles:hover {
+    opacity: 1;
+}
+
+#about:hover {
+    opacity: 1;
+}
 
 .strtBtn {
     display: block;
@@ -123,10 +146,6 @@ body {
     right: 12em;
     left: 12em;
     display: block;
-}
-
-#startPage {
-    min-height: 100vh;
 }
 
 #characterGrid {
