@@ -142,11 +142,56 @@ body {
 
 /*Edicion de items en grid*/
 
+
+/*NAME*/
+
 h1 {
     font-size: 1em;
     justify-content: center;
     text-align: center;
 }
+
+
+/*"APPEARS IN EPISODE"*/
+
+h2 {
+    color: white;
+}
+
+
+/*EPISODE NUMBER*/
+
+h5 {
+    color: fuchsia;
+}
+
+
+/*GENDER*/
+
+h3 {
+    color: green;
+}
+
+
+/*SPECIES*/
+
+h4 {
+    color: red;
+}
+
+
+/*PARA APLICAR UN ESTILO A TODOS LOS TEXTOS*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: 1.4em;
+}
+
+
+/*IMAGEN DE PERSONAJE*/
 
 img {
     width: 15em;

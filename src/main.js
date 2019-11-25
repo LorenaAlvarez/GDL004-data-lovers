@@ -23,11 +23,45 @@ import {
     sortID
 } from './data.js'
 
+
+//FUNCIONALIDADES DE MOSTRAR OCULTAR
 //To show search bar
 document.getElementById("searchBar").style.display = "none";
 document.getElementById("searchBtn").addEventListener("click", function() {
     document.getElementById("searchBar").style.display = "block";
 });
+
+//BUTTON START / hide start and show characters
+document.getElementById("container").addEventListener("click", function() {
+    document.getElementById("characterPage").style.display = "block"
+    document.getElementById("buttons").style.display = "block"
+    document.getElementById("startPage").style.display = "none"
+});
+
+
+
+//FUNCION INICIAL DE MOSTRAR SOLO 15 PERSONAJES//
+let i = 1;
+for (let personaje of RICKANDMORTY.results) {
+    const template = document.createElement('div');
+    template.classList.add('personaje');
+    template.innerHTML = '<h1>' + "Name: " + '<br>' + personaje.name +
+        '</h1><br>' + '<h2>' + " Appears in episode " + '</h2><br>' + '<h5>' +
+        personaje.episode.map(v => {
+            if (v.length === 41) {
+                return v.slice(-1)
+            } else { return v.slice(-2) }
+        }) + '</h5><br>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h2><br>' + '<h4>' + " Species: " + '<br>' + personaje.species + '</h4><img src="' + personaje.image + '"> ';
+
+    document.getElementById('characterGrid').appendChild(template);
+
+    // Mostrar solo los primeros 15
+    if (i === 15) {
+        break; // Se rompe el ciclo for
+    }
+    i++;
+};
+
 
 
 
@@ -51,35 +85,6 @@ document.getElementById("D").addEventListener("click", showAll);
 
 
 
-//BUTTON START / hide start and show characters
-document.getElementById("container").addEventListener("click", function() {
-    document.getElementById("characterPage").style.display = "block"
-    document.getElementById("buttons").style.display = "block"
-    document.getElementById("startPage").style.display = "none"
-});
-
-
-
-let i = 1;
-for (let personaje of RICKANDMORTY.results) {
-    const template = document.createElement('div');
-    template.classList.add('personaje');
-    template.innerHTML = '<h1>' + "Name: " + personaje.name +
-        '<br>' + " Appears in episode " +
-        personaje.episode.map(v => {
-            if (v.length === 41) {
-                return v.slice(-1)
-            } else { return v.slice(-2) }
-        }) + " Gender: " + personaje.gender + " Species: " + personaje.species + '</h1><img src="' + personaje.image + '"> ';
-
-    document.getElementById('characterGrid').appendChild(template);
-
-    // Mostrar solo los primeros 15
-    if (i === 15) {
-        break; // Se rompe el ciclo for
-    }
-    i++;
-};
 
 
 //FUNCION PARA MOSTRAR POR LETRAS
