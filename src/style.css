@@ -139,6 +139,19 @@ body {
 }
 
 
+/*Edicion de items en grid*/
+
+h1 {
+    font-size: 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+img {
+    width: 15em;
+}
+
+
 /*BOTONES */
 
 #buttons {
