@@ -8,15 +8,17 @@ ROSA    #F2BEA0
 
 body {
     background-image: url(https://ramenswag.com/wp-content/uploads/2019/03/Rick-Morty-Wallpaper-Dump-_-Album-on-Imgur.png);
-    /*     background-image: url(https://wallpaperaccess.com/full/637720.png);
- */
     background-color: black;
     background-attachment: fixed;
     background-position-x: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
+
+
+/*PAGINA PRINCIPAL*/
 
 #startPage {
     min-height: 100vh;
@@ -32,48 +34,13 @@ body {
     opacity: 1;
 }
 
-#characterPage {
-    min-height: 100vh;
-    background-color: white;
-}
-
-#ButtonStart {
-    width: 200px;
-    height: 200px;
-    font-size: 24px;
-    border-radius: 50%;
-    justify-content: flex-end;
-}
-
-.searchBtn {
-    height: 2em;
-    width: 2em;
-    justify-content: flex-end;
-}
-
-.letras {
-    background-color: transparent;
-    border: transparent;
-    font-size: 1.5em;
-}
-
-#abc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.abc:hover {
-    color: fuchsia;
-    cursor: pointer;
-}
-
-#characterPage {
-    display: none;
-}
-
-#buttons {
-    display: none;
+#buttonStrt {
+    margin: auto;
+    width: 50%;
+    position: relative;
+    right: 50%;
+    left: 15%;
+    display: block;
 }
 
 .titles {
@@ -139,19 +106,22 @@ body {
     -ms-transform: translate(-50%, -50%);
 }
 
-#buttonStrt {
-    margin: auto;
-    width: 50%;
-    position: relative;
-    right: 12em;
-    left: 12em;
-    display: block;
+
+/*CHARACTER PAGE */
+
+#characterPage {
+    display: none;
+}
+
+#characterPage {
+    min-height: 100vh;
+    background-color: white;
 }
 
 #characterGrid {
     display: grid;
     grid-template-columns: auto auto;
-    background: rgba(241, 227, 70, 0.5);
+    background: rgba(160, 223, 61, 0.5);
     padding: 10px;
     grid-gap: 1em;
     margin: auto;
@@ -159,8 +129,6 @@ body {
 }
 
 .gridItem {
-    background-color: #8DC042;
-    border: 1px solid white;
     padding: 20px;
     display: block;
     text-align: center;
@@ -170,11 +138,37 @@ body {
     background-size: cover;
 }
 
+
+/*BOTONES */
+
+#buttons {
+    display: none;
+}
+
 .searchBtn {
     display: flex;
     float: right;
     height: 3em;
     width: 3em;
+}
+
+.abc {
+    background-color: transparent;
+    border: transparent;
+    font-size: 1.5em;
+    color: white;
+    padding: 0.5em;
+}
+
+#letras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abc:hover {
+    color: #F1E346;
+    cursor: pointer;
 }
 
 #searchBar {
@@ -281,7 +275,7 @@ label {
     font-size: 28px;
     line-height: 50px;
     padding-left: 1em;
-    color: black;
+    color: #F1E346;
 }
 
 .nav ul,
@@ -307,6 +301,6 @@ label {
     padding: 0 1em;
     list-style: none;
     text-decoration: none;
-    color: black;
+    color: gray;
     font-weight: 100;
 }
