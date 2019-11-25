@@ -1,5 +1,7 @@
 import RICKANDMORTY from './data/rickandmorty/rickandmorty.js'
 
+
+//FUNCION PARA FILTRAR POR LETRAS
 window.manager = {
     filterData(data, condition) {
         if (condition === "filtroLetras") {
@@ -36,11 +38,11 @@ const unks = RICKANDMORTY.results.filter((unk) => unk.gender === "unknown");
 // Con esta función, logro que aparezcan los personajes que exclusiva y unicamente aparecen en el episodio 1, si el personaje 
 // aparece en varios capitulos además del 1, no lo muestra.
 
-const episode1 = RICKANDMORTY.results.filter((ep1) => ep1.episode.map(v => {
+const episode1 = RICKANDMORTY.results.filter((ep1) => Number(ep1.episode.map(v => {
     if (v.length === 41) {
         return v.slice(-1)
     } else { return v.slice(-2) }
-}) == 1);
+})) === 1);
 
 console.log(episode1);
 

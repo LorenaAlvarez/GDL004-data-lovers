@@ -25,11 +25,6 @@ import {
 
 
 //FUNCIONALIDADES DE MOSTRAR OCULTAR
-//To show search bar
-document.getElementById("searchBar").style.display = "none";
-document.getElementById("searchBtn").addEventListener("click", function() {
-    document.getElementById("searchBar").style.display = "block";
-});
 
 //BUTTON START / hide start and show characters
 document.getElementById("container").addEventListener("click", function() {
