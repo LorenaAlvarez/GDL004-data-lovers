@@ -119,24 +119,17 @@ body {
     background-color: white;
 }
 
-#characterGrid {
+.characterGrid {
     display: grid;
     grid-template-columns: auto auto;
+    grid-auto-flow: row;
+    grid-gap: 0.5em;
     background: rgba(160, 223, 61, 0.5);
-    padding: 10px;
-    grid-gap: 1em;
-    margin: auto;
-    right: 12em;
+    padding: 10px 0;
 }
 
-.gridItem {
-    padding: 20px;
-    display: block;
-    text-align: center;
-    font-size: 1em;
-    position: relative;
-    overflow: scroll;
-    background-size: cover;
+#characterGrid.item {
+    border: 1px black;
 }
 
 
@@ -146,7 +139,6 @@ body {
 /*NAME*/
 
 h1 {
-    font-size: 1em;
     justify-content: center;
     text-align: center;
 }
@@ -187,14 +179,17 @@ h2,
 h3,
 h4,
 h5 {
-    font-size: 1.4em;
+    text-align: center;
 }
 
 
 /*IMAGEN DE PERSONAJE*/
 
 img {
-    width: 15em;
+    width: 10em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
