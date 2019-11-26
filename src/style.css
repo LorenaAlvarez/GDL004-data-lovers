@@ -116,19 +116,21 @@ body {
     display: none;
 }
 
-.characterPage {
+
+/* .characterPage {
     min-height: 100vh;
-}
+} */
 
 .characterGrid {
     display: grid;
     align-content: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     grid-gap: 0.5em;
     background: rgba(0, 0, 0, 0.6);
-    background-size: cover;
+    background-size: contain;
     overflow-x: scroll;
-    overflow-y: visible;
+    padding: 1.5em;
+    width: 100%;
 }
 
 
@@ -140,46 +142,48 @@ body {
 h1 {
     justify-content: center;
     text-align: center;
-    color: white;
+    color: #F1E346;
+    font-size: 1.5em;
 }
 
 
 /*"APPEARS IN EPISODE"*/
 
 h2 {
+    justify-content: center;
+    text-align: center;
     color: white;
+    font-size: 1em;
 }
 
 
 /*EPISODE NUMBER*/
 
 h5 {
-    color: fuchsia;
+    justify-content: center;
+    text-align: center;
+    color: #F2BEA0;
+    font-size: 1.2em;
 }
 
 
 /*GENDER*/
 
 h3 {
-    color: green;
+    justify-content: center;
+    text-align: center;
+    color: #8DC042;
+    font-size: 1em;
 }
 
 
 /*SPECIES*/
 
 h4 {
-    color: red;
-}
-
-
-/*PARA APLICAR UN ESTILO A TODOS LOS TEXTOS*/
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+    justify-content: center;
     text-align: center;
+    color: #87C1E2;
+    font-size: 1em;
 }
 
 

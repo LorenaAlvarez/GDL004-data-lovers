@@ -41,7 +41,7 @@ for (let personaje of RICKANDMORTY.results) {
     const template = document.createElement('div');
     template.classList.add('personaje');
     template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-        '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+        '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
         personaje.episode.map(v => {
             if (v.length === 41) {
                 return v.slice(-1)
@@ -76,7 +76,7 @@ for (let i = 0; i < abc.length; i++) {
             const template = document.createElement('div');
             template.classList.add('personaje');
             template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-                '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+                '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
                 personaje.episode.map(v => {
                     if (v.length === 41) {
                         return v.slice(-1)
@@ -102,7 +102,7 @@ document.getElementById("aliens").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje');
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -125,7 +125,7 @@ document.getElementById("animals").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -147,7 +147,7 @@ document.getElementById("cronenbergs").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -169,7 +169,7 @@ document.getElementById("diseases").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -191,7 +191,7 @@ document.getElementById("human").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -213,7 +213,7 @@ document.getElementById("humanoids").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -235,7 +235,7 @@ document.getElementById("mythologs").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -257,7 +257,7 @@ document.getElementById("parasites").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -279,7 +279,7 @@ document.getElementById("poopys").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -301,7 +301,7 @@ document.getElementById("robots").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -323,7 +323,7 @@ document.getElementById("unknowns").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -345,7 +345,7 @@ document.getElementById("vampires").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -367,7 +367,7 @@ document.getElementById("females").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -389,7 +389,7 @@ document.getElementById("males").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -411,7 +411,7 @@ document.getElementById("unks").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -436,7 +436,7 @@ document.getElementById("ep1").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -458,7 +458,7 @@ document.getElementById("sortName").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -480,7 +480,7 @@ document.getElementById("sortSpe").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -502,7 +502,7 @@ document.getElementById("sortGend").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -524,7 +524,7 @@ document.getElementById("sortEp").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
@@ -546,7 +546,7 @@ document.getElementById("sortID").addEventListener("click", function() {
         const template = document.createElement('div');
         template.classList.add('personaje')
         template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
             personaje.episode.map(v => {
                 if (v.length === 41) {
                     return v.slice(-1)
