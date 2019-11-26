@@ -9,7 +9,6 @@ ROSA    #F2BEA0
 
 body {
     background-image: url(https://ramenswag.com/wp-content/uploads/2019/03/Rick-Morty-Wallpaper-Dump-_-Album-on-Imgur.png);
-    background-color: black;
     background-attachment: fixed;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -28,11 +27,36 @@ body {
 
 #logotipo {
     opacity: 0.8;
-    height: 18em;
+    height: 12em;
     width: auto;
 }
 
 #logotipo:hover {
+    opacity: 1;
+}
+
+.titles {
+    font-size: 2em;
+    color: #F2BEA0;
+    text-align: center;
+    background-blend-mode: lighten;
+    opacity: 0.6;
+    display: flex;
+    -ms-flex-align: center;
+}
+
+#about {
+    font-size: 1em;
+    color: #F1E346;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.titles:hover {
+    opacity: 1;
+}
+
+#about:hover {
     opacity: 1;
 }
 
@@ -45,34 +69,11 @@ body {
     display: block;
 }
 
-.titles {
-    font-size: 2em;
-    color: #F2BEA0;
-    text-align: center;
-    background-blend-mode: lighten;
-    opacity: 0.4;
-}
-
-#about {
-    font-size: 1em;
-    color: #F1E346;
-    text-align: center;
-    opacity: 0.4;
-}
-
-.titles:hover {
-    opacity: 1;
-}
-
-#about:hover {
-    opacity: 1;
-}
-
 .strtBtn {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20em;
+    width: 30em;
 }
 
 .container {
@@ -99,8 +100,9 @@ body {
 
 .text {
     color: black;
-    font-size: 3em;
+    font-size: 4.5em;
     position: absolute;
+    font-family: roboto;
     top: 50%;
     left: 50%;
     opacity: 1;
@@ -115,26 +117,25 @@ body {
     display: none;
 }
 
-#characterPage {
+
+/* .characterPage {
     min-height: 100vh;
-    background-color: white;
-}
+} */
 
 .characterGrid {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-auto-flow: row;
+    align-content: center;
+    grid-template-columns: 50% 50%;
     grid-gap: 0.5em;
-    background: rgba(160, 223, 61, 0.5);
-    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.6);
+    background-size: contain;
+    overflow-x: scroll;
+    padding: 1.5em;
+    width: 100%;
 }
 
-#characterGrid.item {
-    border: 1px black;
-}
 
-
-/*Edicion de items en grid*/
+/*Edicion de items en character display*/
 
 
 /*NAME*/
@@ -142,45 +143,48 @@ body {
 h1 {
     justify-content: center;
     text-align: center;
+    color: #F1E346;
+    font-size: 1.5em;
 }
 
 
 /*"APPEARS IN EPISODE"*/
 
 h2 {
+    justify-content: center;
+    text-align: center;
     color: white;
+    font-size: 1em;
 }
 
 
 /*EPISODE NUMBER*/
 
 h5 {
-    color: fuchsia;
+    justify-content: center;
+    text-align: center;
+    color: #F2BEA0;
+    font-size: 1.2em;
 }
 
 
 /*GENDER*/
 
 h3 {
-    color: green;
+    justify-content: center;
+    text-align: center;
+    color: #8DC042;
+    font-size: 1em;
 }
 
 
 /*SPECIES*/
 
 h4 {
-    color: red;
-}
-
-
-/*PARA APLICAR UN ESTILO A TODOS LOS TEXTOS*/
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+    justify-content: center;
     text-align: center;
+    color: #87C1E2;
+    font-size: 1em;
 }
 
 
@@ -200,13 +204,6 @@ img {
     display: none;
 }
 
-.searchBtn {
-    display: flex;
-    float: right;
-    height: 3em;
-    width: 3em;
-}
-
 .abc {
     background-color: transparent;
     border: transparent;
@@ -224,28 +221,6 @@ img {
 .abc:hover {
     color: #F1E346;
     cursor: pointer;
-}
-
-#searchBar {
-    display: flex;
-    float: right;
-    font-size: 1em;
-    color: black;
-    font-style: italic;
-    font-weight: bold;
-    font-family: roboto;
-    text-transform: capitalize;
-    background-color: pink;
-    width: 15em;
-    height: 2em;
-}
-
-#showAll {
-    background-color: #8DC042;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
 }
 
 
