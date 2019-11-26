@@ -122,9 +122,13 @@ body {
 
 .characterGrid {
     display: grid;
+    align-content: center;
     grid-template-columns: auto auto;
     grid-gap: 0.5em;
     background: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    overflow-x: scroll;
+    overflow-y: visible;
 }
 
 
