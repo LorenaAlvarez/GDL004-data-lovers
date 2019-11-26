@@ -35,8 +35,8 @@ document.getElementById("container").addEventListener("click", function() {
 
 
 
-//FUNCION INICIAL DE MOSTRAR SOLO 15 PERSONAJES//
-let i = 1;
+//FUNCION INICIAL//
+
 for (let personaje of RICKANDMORTY.results) {
     const template = document.createElement('div');
     template.classList.add('personaje');
@@ -49,35 +49,13 @@ for (let personaje of RICKANDMORTY.results) {
         }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
         personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-    document.getElementById('gridItem').appendChild(template);
+    document.getElementById('characterGrid').appendChild(template);
     // Mostrar solo los primeros 15
-    if (i === 15) {
-        break; // Se rompe el ciclo for
-    }
-    i++;
+
 };
 
 
 
-
-//SHOW ALL
-const showAll = () => {
-    for (let personaje of RICKANDMORTY.results) {
-        const template = document.createElement('div');
-        template.classList.add('personaje');
-        template.innerHTML = '<h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4><img src="' + personaje.image + '"> ';
-
-        document.getElementById('gridItem').appendChild(template);
-    }
-};
-document.getElementById("D").addEventListener("click", showAll);
 
 
 
@@ -106,7 +84,7 @@ for (let i = 0; i < abc.length; i++) {
                 }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
                 personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-            document.getElementById('gridItem').appendChild(template);
+            document.getElementById('characterGrid').appendChild(template);
         }
     })
 }
@@ -132,7 +110,7 @@ document.getElementById("aliens").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -155,7 +133,7 @@ document.getElementById("animals").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -177,7 +155,7 @@ document.getElementById("cronenbergs").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -199,7 +177,7 @@ document.getElementById("diseases").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -221,7 +199,7 @@ document.getElementById("human").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -243,7 +221,7 @@ document.getElementById("humanoids").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -265,7 +243,7 @@ document.getElementById("mythologs").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -287,7 +265,7 @@ document.getElementById("parasites").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -309,7 +287,7 @@ document.getElementById("poopys").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -331,7 +309,7 @@ document.getElementById("robots").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -353,7 +331,7 @@ document.getElementById("unknowns").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -375,7 +353,7 @@ document.getElementById("vampires").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -397,7 +375,7 @@ document.getElementById("females").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -419,7 +397,7 @@ document.getElementById("males").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -441,7 +419,7 @@ document.getElementById("unks").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -466,7 +444,7 @@ document.getElementById("ep1").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -488,7 +466,7 @@ document.getElementById("sortName").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -510,7 +488,7 @@ document.getElementById("sortSpe").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -532,7 +510,7 @@ document.getElementById("sortGend").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -554,7 +532,7 @@ document.getElementById("sortEp").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })
 
@@ -576,6 +554,6 @@ document.getElementById("sortID").addEventListener("click", function() {
             }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
             personaje.species + '</h4><img src="' + personaje.image + '"> ';
 
-        document.getElementById('gridItem').appendChild(template);
+        document.getElementById('characterGrid').appendChild(template);
     }
 })

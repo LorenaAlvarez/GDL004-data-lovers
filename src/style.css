@@ -8,7 +8,6 @@ ROSA    #F2BEA0
 
 body {
     background-image: url(https://ramenswag.com/wp-content/uploads/2019/03/Rick-Morty-Wallpaper-Dump-_-Album-on-Imgur.png);
-    background-color: black;
     background-attachment: fixed;
     background-position-x: center;
     background-repeat: no-repeat;
@@ -33,15 +32,6 @@ body {
 
 #logotipo:hover {
     opacity: 1;
-}
-
-#buttonStrt {
-    margin: auto;
-    width: 50%;
-    position: relative;
-    right: 50%;
-    left: 15%;
-    display: block;
 }
 
 .titles {
@@ -69,11 +59,20 @@ body {
     opacity: 1;
 }
 
+#buttonStrt {
+    margin: auto;
+    width: 50%;
+    position: relative;
+    right: 50%;
+    left: 15%;
+    display: block;
+}
+
 .strtBtn {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20em;
+    width: 30em;
 }
 
 .container {
@@ -100,8 +99,9 @@ body {
 
 .text {
     color: black;
-    font-size: 3em;
+    font-size: 4.5em;
     position: absolute;
+    font-family: roboto;
     top: 50%;
     left: 50%;
     opacity: 1;
@@ -121,21 +121,14 @@ body {
 }
 
 .characterGrid {
-    align-items: center;
     display: grid;
     grid-template-columns: auto auto;
-    grid-auto-flow: row;
     grid-gap: 0.5em;
     background: rgba(0, 0, 0, 0.6);
-    padding: 10px 0;
-}
-
-.characterGrid.item {
-    border: 1px black;
 }
 
 
-/*Edicion de items en grid*/
+/*Edicion de items en character display*/
 
 
 /*NAME*/
@@ -143,6 +136,7 @@ body {
 h1 {
     justify-content: center;
     text-align: center;
+    color: white;
 }
 
 
