@@ -123,14 +123,23 @@ body {
 
 .characterGrid {
     display: grid;
+    margin-left: auto;
+    margin-right: auto;
     align-content: center;
     grid-template-columns: 50% 50%;
-    grid-gap: 0.5em;
+    grid-column-gap: 5%;
     background: rgba(0, 0, 0, 0.6);
     background-size: contain;
     overflow-x: scroll;
-    padding: 1.5em;
-    width: 100%;
+    padding: 2em;
+    overflow: hidden;
+    position: relative;
+    justify-self: center;
+}
+
+.personaje {
+    background-color: rgba(200, 0, 0, 0.6);
+    justify-content: center;
 }
 
 
@@ -143,7 +152,7 @@ h1 {
     justify-content: center;
     text-align: center;
     color: #F1E346;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 
@@ -153,17 +162,21 @@ h2 {
     justify-content: center;
     text-align: center;
     color: white;
-    font-size: 1em;
+    font-size: 1.7em;
 }
 
 
 /*EPISODE NUMBER*/
 
 h5 {
-    justify-content: center;
     text-align: center;
+    overflow: auto;
     color: #F2BEA0;
-    font-size: 1.2em;
+    font-size: 1.7em;
+}
+
+h5::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -173,7 +186,7 @@ h3 {
     justify-content: center;
     text-align: center;
     color: #8DC042;
-    font-size: 1em;
+    font-size: 1.7em;
 }
 
 
@@ -183,14 +196,14 @@ h4 {
     justify-content: center;
     text-align: center;
     color: #87C1E2;
-    font-size: 1em;
+    font-size: 1.7em;
 }
 
 
 /*IMAGEN DE PERSONAJE*/
 
 img {
-    width: 10em;
+    width: 40%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -213,12 +226,14 @@ img {
 
 #letras {
     display: flex;
+    float: center;
     justify-content: center;
-    align-items: center;
+    width: 100%;
 }
 
 .abc:hover {
     color: #F1E346;
+    font-weight: bolder;
     cursor: pointer;
 }
 
@@ -243,15 +258,15 @@ img {
 /*arrow*/
 
 .arrow {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
     float: left;
     z-index: 0;
 }
 
 .item input+.arrow {
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     transition: 0.1s;
 }
 
@@ -304,6 +319,10 @@ label {
     font-size: 28px;
     line-height: 50px;
     padding-left: 1em;
+    color: white;
+}
+
+#nav-icon:hover {
     color: #F1E346;
 }
 
