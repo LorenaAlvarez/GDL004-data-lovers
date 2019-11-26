@@ -23,7 +23,6 @@ import {
     sortID
 } from './data.js'
 
-
 //FUNCIONALIDADES DE MOSTRAR OCULTAR
 //To show search bar
 document.getElementById("searchBar").style.display = "none";
@@ -584,3 +583,4 @@ document.getElementById("sortID").addEventListener("click", function() {
         document.getElementById('gridItem').appendChild(template);
     }
 })
+
