@@ -534,27 +534,7 @@ document.getElementById("sortGend").addEventListener("click", function() {
     }
 })
 
-//FUNCTION SORT BY EPISODE!!
 
-document.getElementById("sortEp").addEventListener("click", function() {
-    let resultados = (sortEp);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
 
 //FUNCTION SORT BY ID!!
 
