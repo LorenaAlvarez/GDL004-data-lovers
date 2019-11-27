@@ -158,7 +158,7 @@ body {
 }
 
 .personaje {
-    background-color: rgba(200, 0, 0, 0.6);
+    background-color: rgba(242, 190, 160, 0.2);
     justify-content: center;
 }
 
@@ -327,23 +327,32 @@ label {
     position: relative;
 }
 
-.nav {
-    width: 10em;
-    background-color: transparent;
-    overflow-x: hidden;
-    border-bottom: 1px solid #CFD8DC;
-    border: transparent;
-}
+
+/*COLORES A UTILIZAR
+AMARILLO  #F1E346
+VERDE OSCURO   #27401D
+VERDE CLARO    #8DC042
+AZUL   #87C1E2
+ROSA    #F2BEA0
+*/
 
 #nav-icon {
     font-size: 28px;
     line-height: 50px;
     padding-left: 1em;
     color: white;
+    background-color: transparent;
 }
 
 #nav-icon:hover {
     color: #F1E346;
+}
+
+.nav {
+    width: 33.33%;
+    float: left;
+    position: absolute;
+    z-index: 2;
 }
 
 .nav ul,
@@ -354,12 +363,13 @@ label {
     padding: 0 2em;
     list-style: none;
     text-decoration: none;
-    color: #90A4AE;
+    background-color: rgba(141, 192, 66, 0.8);
+    color: white;
     font-weight: 100;
     width: 100%;
 }
 
-.item ul {
+.item ul li {
     padding: 0 0.25em;
 }
 
@@ -369,6 +379,6 @@ label {
     padding: 0 1em;
     list-style: none;
     text-decoration: none;
-    color: gray;
+    color: #27401D;
     font-weight: 100;
 }
