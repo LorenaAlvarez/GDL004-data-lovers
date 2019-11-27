@@ -1,17 +1,5 @@
 import RICKANDMORTY from './data/rickandmorty/rickandmorty.js'
 import {
-    humans,
-    aliens,
-    humanoids,
-    unknowns,
-    poopys,
-    mythologs,
-    animals,
-    vampires,
-    robots,
-    cronenbergs,
-    diseases,
-    parasites,
     females,
     males,
     unks,
@@ -24,10 +12,9 @@ import {
 } from './data.js'
 
 
-//FUNCIONALIDADES DE MOSTRAR OCULTAR
+//FUNCIONALIDAD BOTON IR ARRIBA
 
 var mybutton = document.getElementById("myBtn");
-
 window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
@@ -54,7 +41,6 @@ document.getElementById("container").addEventListener("click", function() {
 });
 
 
-
 //FUNCION INICIAL//
 
 for (let personaje of RICKANDMORTY.results) {
@@ -73,11 +59,6 @@ for (let personaje of RICKANDMORTY.results) {
     // Mostrar solo los primeros 15
 
 };
-
-
-
-
-
 
 
 
@@ -111,271 +92,37 @@ for (let i = 0; i < abc.length; i++) {
 
 
 
+//E.TARGET ESPECIES
+var theParent = document.querySelector("#listaEspecies")
+theParent.addEventListener("click", filterBySpecies, false);
 
-//FUNCTION FILTER BY SPECIES -- ALIENS!!
+function filterBySpecies(e) {
+    if (e.target !== e.currentTarget) {
+        let especieSeleccionada = e.target.id;
+        let species = RICKANDMORTY.results.filter((e) => e.species === especieSeleccionada);
 
-document.getElementById("aliens").addEventListener("click", function() {
-    let resultados = (aliens);
-    document.getElementById("characterGrid").innerHTML = ""
+        e.stopPropagation();
 
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje');
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
+        document.getElementById("characterGrid").innerHTML = ""
 
-        document.getElementById('characterGrid').appendChild(template);
+        for (let personaje of species) {
+            const template = document.createElement('div');
+            template.classList.add('personaje');
+            template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
+                '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
+                personaje.episode.map(v => {
+                    if (v.length === 41) {
+                        return v.slice(-1)
+                    } else { return v.slice(-2) }
+                }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
+                personaje.species + '</h4>';
+
+            document.getElementById('characterGrid').appendChild(template);
+        }
     }
-})
+};
 
 
-//FUNCTION FILTER BY SPECIES -- ANIMALS!!
-
-document.getElementById("animals").addEventListener("click", function() {
-    let resultados = (animals);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- CRONENBERGS!!
-
-document.getElementById("cronenbergs").addEventListener("click", function() {
-    let resultados = (cronenbergs);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- DISEASES!!
-
-document.getElementById("diseases").addEventListener("click", function() {
-    let resultados = (diseases);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- HUMANS!!
-
-document.getElementById("human").addEventListener("click", function() {
-    let resultados = (humans);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- HUMANOIDS!!
-
-document.getElementById("humanoids").addEventListener("click", function() {
-    let resultados = (humanoids);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- MYTHOLOGS!!
-
-document.getElementById("mythologs").addEventListener("click", function() {
-    let resultados = (mythologs);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- PARASITES!!
-
-document.getElementById("parasites").addEventListener("click", function() {
-    let resultados = (parasites);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- POOPYBUTTHOLES!!
-
-document.getElementById("poopys").addEventListener("click", function() {
-    let resultados = (poopys);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- ROBOTS!!
-
-document.getElementById("robots").addEventListener("click", function() {
-    let resultados = (robots);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- UNKNOWN!!
-
-document.getElementById("unknowns").addEventListener("click", function() {
-    let resultados = (unknowns);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY SPECIES -- VAMPIRES!!
-
-document.getElementById("vampires").addEventListener("click", function() {
-    let resultados = (vampires);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
 
 //FUNCTION FILTER BY GENDER -- FEMALES!!
 
