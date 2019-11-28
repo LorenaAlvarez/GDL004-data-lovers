@@ -21,17 +21,15 @@ window.manager = {
 
 
 //FILTER GENDER
-const females = RICKANDMORTY.results.filter((female) => female.gender === "Female");
-const males = RICKANDMORTY.results.filter((male) => male.gender === "Male");
-const unks = RICKANDMORTY.results.filter((unk) => unk.gender === "unknown");
+
 
 //FILTER EPISODE
 
 // YA FUNCIONA! :)
 
 
-const episode1 = RICKANDMORTY.results.filter(result => result.episode.includes('https://rickandmortyapi.com/api/episode/1'));
-
+/* const episode1 = RICKANDMORTY.results.filter(result => result.episode.includes('https://rickandmortyapi.com/api/episode/1'));
+ */
 
 
 
@@ -66,10 +64,6 @@ const sortEp = Array.from(arr).sort((a, b) => {
 
 
 export {
-    females,
-    males,
-    unks,
-    episode1,
     sortName,
     sortGe,
     sortSp,

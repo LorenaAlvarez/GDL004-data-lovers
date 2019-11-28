@@ -1,9 +1,5 @@
 import RICKANDMORTY from './data/rickandmorty/rickandmorty.js'
 import {
-    females,
-    males,
-    unks,
-    episode1,
     sortEp,
     sortGe,
     sortSp,
@@ -172,12 +168,40 @@ const filterByGender = (e) => {
 let theParentGender = document.querySelector("#listaGeneros")
 theParentGender.addEventListener("click", filterByGender, false);
 
+//E.TARGET EPISODE FIRST SEASON
+
+const filterByEpisode = (e) => {
+    if (e.target !== e.currentTarget) {
+        let episodioSeleccionado = e.target.id;
+        let episodios = RICKANDMORTY.results.filter((e) => e.episode.includes === episodioSeleccionado);
+        console.log(episodios);
+        document.getElementById("characterGrid").innerHTML = ""
+
+        for (let personaje of episodios) {
+            const template = document.createElement('div');
+            template.classList.add('personaje');
+            template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
+                '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
+                personaje.episode.map(v => {
+                    if (v.length === 41) {
+                        return v.slice(-1)
+                    } else { return v.slice(-2) }
+                }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
+                personaje.species + '</h4>';
+
+            document.getElementById('characterGrid').appendChild(template);
+        }
+    }
+};
+
+let theParentEpisode = document.querySelector("#listaEpisodiosUno")
+theParentEpisode.addEventListener("click", filterByEpisode, false);
+
+
 //FUNCTION FILTER BY EPISODE -- EP1!!
 
-// Con esta función, logro que aparezcan los personajes que exclusiva y unicamente aparecen en el episodio 1, si el personaje 
-// aparece en varios capitulos además del 1, no lo muestra.
 
-document.getElementById("https://rickandmortyapi.com/api/episode/1").addEventListener("click", function() {
+/* document.getElementById("https://rickandmortyapi.com/api/episode/1").addEventListener("click", function() {
     let resultados = (episode1);
     document.getElementById("characterGrid").innerHTML = ""
 
@@ -195,7 +219,7 @@ document.getElementById("https://rickandmortyapi.com/api/episode/1").addEventLis
 
         document.getElementById('characterGrid').appendChild(template);
     }
-})
+}) */
 
 //FUNCTION SORT BY NAME!!
 
