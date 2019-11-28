@@ -114,15 +114,11 @@ for (let i = 0; i < abc.length; i++) {
 
 
 //E.TARGET ESPECIES
-var theParent = document.querySelector("#listaEspecies")
-theParent.addEventListener("click", filterBySpecies, false);
 
-function filterBySpecies(e) {
+const filterBySpecies = (e) => {
     if (e.target !== e.currentTarget) {
         let especieSeleccionada = e.target.id;
         let species = RICKANDMORTY.results.filter((e) => e.species === especieSeleccionada);
-
-        e.stopPropagation();
 
         document.getElementById("characterGrid").innerHTML = ""
 
@@ -143,80 +139,45 @@ function filterBySpecies(e) {
     }
 };
 
+let theParent = document.querySelector("#listaEspecies")
+theParent.addEventListener("click", filterBySpecies, false);
 
 
-//FUNCTION FILTER BY GENDER -- FEMALES!!
+//E.TARGET GENDER
 
-document.getElementById("females").addEventListener("click", function() {
-    let resultados = (females);
-    document.getElementById("characterGrid").innerHTML = ""
+const filterByGender = (e) => {
+    if (e.target !== e.currentTarget) {
+        let generoSeleccionado = e.target.id;
+        let generos = RICKANDMORTY.results.filter((e) => e.gender === generoSeleccionado);
 
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
+        document.getElementById("characterGrid").innerHTML = ""
 
-        document.getElementById('characterGrid').appendChild(template);
+        for (let personaje of generos) {
+            const template = document.createElement('div');
+            template.classList.add('personaje');
+            template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
+                '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
+                personaje.episode.map(v => {
+                    if (v.length === 41) {
+                        return v.slice(-1)
+                    } else { return v.slice(-2) }
+                }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
+                personaje.species + '</h4>';
+
+            document.getElementById('characterGrid').appendChild(template);
+        }
     }
-})
+};
 
-//FUNCTION FILTER BY GENDER -- MALES!!
-
-document.getElementById("males").addEventListener("click", function() {
-    let resultados = (males);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
-
-//FUNCTION FILTER BY GENDER -- UNKNOWN!!
-
-document.getElementById("unks").addEventListener("click", function() {
-    let resultados = (unks);
-    document.getElementById("characterGrid").innerHTML = ""
-
-    for (let personaje of resultados) {
-        const template = document.createElement('div');
-        template.classList.add('personaje')
-        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-            personaje.episode.map(v => {
-                if (v.length === 41) {
-                    return v.slice(-1)
-                } else { return v.slice(-2) }
-            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-            personaje.species + '</h4>';
-
-        document.getElementById('characterGrid').appendChild(template);
-    }
-})
+let theParentGender = document.querySelector("#listaGeneros")
+theParentGender.addEventListener("click", filterByGender, false);
 
 //FUNCTION FILTER BY EPISODE -- EP1!!
 
 // Con esta función, logro que aparezcan los personajes que exclusiva y unicamente aparecen en el episodio 1, si el personaje 
 // aparece en varios capitulos además del 1, no lo muestra.
 
-document.getElementById("ep1").addEventListener("click", function() {
+document.getElementById("https://rickandmortyapi.com/api/episode/1").addEventListener("click", function() {
     let resultados = (episode1);
     document.getElementById("characterGrid").innerHTML = ""
 
