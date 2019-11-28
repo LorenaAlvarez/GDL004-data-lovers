@@ -16,18 +16,26 @@ window.manager = {
 
 
 //FILTER SPECIES
-const aliens = RICKANDMORTY.results.filter((alien) => alien.species === "Alien");
-const animals = RICKANDMORTY.results.filter((animal) => animal.species === "Animal");
-const cronenbergs = RICKANDMORTY.results.filter((cronenberg) => cronenberg.species === "Cronenberg");
-const diseases = RICKANDMORTY.results.filter((disease) => disease.species === "Disease");
-const humans = RICKANDMORTY.results.filter((human) => human.species === "Human");
-const humanoids = RICKANDMORTY.results.filter((humanoid) => humanoid.species === "Humanoid");
-const mythologs = RICKANDMORTY.results.filter((mytholog) => mytholog.species === "Mytholog");
-const parasites = RICKANDMORTY.results.filter((parasite) => parasite.species === "Parasite");
-const poopys = RICKANDMORTY.results.filter((poopy) => poopy.species === "Poopybutthole");
-const robots = RICKANDMORTY.results.filter((robot) => robot.species === "Robot");
-const unknowns = RICKANDMORTY.results.filter((unknown) => unknown.species === "unknown");
-const vampires = RICKANDMORTY.results.filter((vampire) => vampire.species === "Vampire");
+
+
+//ESPECIES E.TARGET
+
+/* var theParent = document.querySelector("#listaEspecies")
+theParent.addEventListener("click", filterBySpecies, false);
+
+function filterBySpecies(e) {
+    if (e.target !== e.currentTarget) {
+        let especieSeleccionada = e.target.id;
+        let species = RICKANDMORTY.results.filter((e) => e.species === especieSeleccionada);
+        console.log(species);
+    }
+    e.stopPropagation();
+}
+ */
+
+
+
+
 //FILTER GENDER
 const females = RICKANDMORTY.results.filter((female) => female.gender === "Female");
 const males = RICKANDMORTY.results.filter((male) => male.gender === "Male");
@@ -39,7 +47,6 @@ const unks = RICKANDMORTY.results.filter((unk) => unk.gender === "unknown");
 
 
 const episode1 = RICKANDMORTY.results.filter(result => result.episode.includes('https://rickandmortyapi.com/api/episode/1'));
-console.log(episode1);
 
 
 
@@ -75,18 +82,6 @@ const sortEp = Array.from(arr).sort((a, b) => {
 
 
 export {
-    humans,
-    aliens,
-    humanoids,
-    unknowns,
-    poopys,
-    mythologs,
-    animals,
-    vampires,
-    robots,
-    cronenbergs,
-    diseases,
-    parasites,
     females,
     males,
     unks,

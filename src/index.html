@@ -19,7 +19,7 @@
         <div id="startPage">
             <img id="logotipo" src="./imgs/logo.png">
             <h1 id="Welcome" class="titles">Welcome to the Rick and Morty Character Web</h1>
-            <p id="about">Have you ever wondered in what chapter of the series does your favorite character appears? In this web, you’ll be able to find out! Click start to begin.</p>
+            <p id="about">Click start to begin.</p>
 
             <a href="#characterPage"></a>
 
@@ -36,7 +36,7 @@
         <div id="buttons">
 
             <div class="nav">
-
+                <div><br></div>
                 <input type="checkbox" id="menu" />
                 <label for="menu" id="nav-icon">&#9776;</label>
                 <div class="multi-level">
@@ -53,20 +53,20 @@
                     <div class="item">
                         <input type="checkbox" id="B" />
                         <img src="imgs/arrow.png" class="arrow"><label for="B">Species</label>
-                        <ul>
+                        <ul id="listaEspecies">
 
-                            <li><a href="#" id="aliens" class="speciesBtn">Alien</a></li>
-                            <li><a href="#" id="animals" class="speciesBtn">Animals</a></li>
-                            <li><a href="#" id="cronenbergs" class="speciesBtn">Cronenbergs</a></li>
-                            <li><a href="#" id="diseases" class="speciesBtn">Diseases</a></li>
-                            <li><a href="#" id="human" class="speciesBtn">Human</a></li>
-                            <li><a href="#" id="humanoids" class="speciesBtn">Humanoid</a></li>
-                            <li><a href="#" id="mythologs" class="speciesBtn">Mythologs</a></li>
-                            <li><a href="#" id="parasites" class="speciesBtn">Parasites</a></li>
-                            <li><a href="#" id="poopys" class="speciesBtn">PoopyButtHoles</a></li>
-                            <li><a href="#" id="robots" class="speciesBtn">Robots</a></li>
-                            <li><a href="#" id="unknowns" class="speciesBtn">Unknown</a></li>
-                            <li><a href="#" id="vampires" class="speciesBtn">Vampires</a></li>
+                            <li><a href="#" id="Alien" class="speciesBtn">Alien</a></li>
+                            <li><a href="#" id="Animal" class="speciesBtn">Animals</a></li>
+                            <li><a href="#" id="Cronenberg" class="speciesBtn">Cronenbergs</a></li>
+                            <li><a href="#" id="Disease" class="speciesBtn">Diseases</a></li>
+                            <li><a href="#" id="Human" class="speciesBtn">Human</a></li>
+                            <li><a href="#" id="Humanoid" class="speciesBtn">Humanoid</a></li>
+                            <li><a href="#" id="Mytholog" class="speciesBtn">Mythologs</a></li>
+                            <li><a href="#" id="Parasite" class="speciesBtn">Parasites</a></li>
+                            <li><a href="#" id="Poopybutthole" class="speciesBtn">PoopyButtHoles</a></li>
+                            <li><a href="#" id="Robot" class="speciesBtn">Robots</a></li>
+                            <li><a href="#" id="unknown" class="speciesBtn">Unknown</a></li>
+                            <li><a href="#" id="Vampire" class="speciesBtn">Vampires</a></li>
 
                         </ul>
                     </div>
@@ -141,7 +141,6 @@
                             <li><a href="#" id="sortName">Name</a></li>
                             <li><a href="#" id="sortSpe">Species</a></li>
                             <li><a href="#" id="sortGend">Gender</a></li>
-                            <li><a href="#" id="sortEp">Episode</a></li>
 
 
                         </ul>
@@ -162,11 +161,10 @@
                 <button id="P" class="abc">P</button><button id="Q" class="abc">Q</button><button id="R" class="abc">R</button><button id="S" class="abc">S</button><button id="T" class="abc">T</button>
                 <button id="V" class="abc">V</button><button id="W" class="abc">W</button><button id="X" class="abc">X</button><button id="Y" class="abc">Y</button><button id="Z" class="abc">Z</button>
             </div>
-
-            <button id="myBtn" title="Go to top"> ^ </button>
-
-
+            <input type="image" src="imgs/arrow.png" id="myBtn" title="Go to top">
         </div>
+
+
 
         <div id="characterPage" class="characterPage">
             <div id="characterGrid" class="characterGrid">
