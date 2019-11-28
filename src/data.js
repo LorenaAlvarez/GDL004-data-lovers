@@ -2,7 +2,7 @@ import RICKANDMORTY from './data/rickandmorty/rickandmorty.js'
 
 
 //FUNCION PARA FILTRAR POR LETRAS
-window.manager = {
+let manager = {
     filterData(data, condition) {
         if (condition === "filtroLetras") {
             let result = data.data.results.filter(character => {
@@ -68,5 +68,6 @@ export {
     sortGe,
     sortSp,
     sortEp,
-    sortID
+    sortID,
+    manager
 }
