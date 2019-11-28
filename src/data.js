@@ -15,23 +15,7 @@ window.manager = {
 }
 
 
-//FILTER SPECIES
-
-
-//ESPECIES E.TARGET
-
-/* var theParent = document.querySelector("#listaEspecies")
-theParent.addEventListener("click", filterBySpecies, false);
-
-function filterBySpecies(e) {
-    if (e.target !== e.currentTarget) {
-        let especieSeleccionada = e.target.id;
-        let species = RICKANDMORTY.results.filter((e) => e.species === especieSeleccionada);
-        console.log(species);
-    }
-    e.stopPropagation();
-}
- */
+//FILTER SPECIES -- AQUI DEBE IR EL CODIGO DE LA FUNCIONALIDAD
 
 
 
