@@ -10,30 +10,30 @@ import {
 
 //FUNCIONALIDAD BOTON IR ARRIBA
 
-var mybutton = document.getElementById("myBtn");
-window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
     if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-        mybutton.style.display = "block";
+        mybutton.style.display = 'block';
     } else {
-        mybutton.style.display = "none";
+        mybutton.style.display = 'none';
     }
 }
+var mybutton = document.getElementById('myBtn');
+window.onscroll = function() { scrollFunction() };
 
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
 
-document.getElementById("myBtn").addEventListener("click", topFunction)
+document.getElementById('myBtn').addEventListener('click', topFunction)
 
 
 //BUTTON START / hide start and show characters
-document.getElementById("container").addEventListener("click", function() {
-    document.getElementById("characterPage").style.display = "block"
-    document.getElementById("buttons").style.display = "block"
-    document.getElementById("startPage").style.display = "none"
+document.getElementById('container').addEventListener('click', function() {
+    document.getElementById('characterPage').style.display = 'block';
+    document.getElementById('buttons').style.display = 'block';
+    document.getElementById('startPage').style.display = 'none';
 });
 
 
@@ -92,7 +92,7 @@ for (let i = 0; i < abc.length; i++) {
 
 const filterBySpecies = (e) => {
     if (e.target !== e.currentTarget) {
-        let especieSeleccionada = e.target.id;
+        let especieSeleccionada = e.target.value;
         let species = RICKANDMORTY.results.filter((e) => e.species === especieSeleccionada);
 
         document.getElementById("characterGrid").innerHTML = ""
@@ -152,8 +152,12 @@ theParentGender.addEventListener("click", filterByGender, false);
 const filterByEpisode = (e) => {
     if (e.target !== e.currentTarget) {
         let episodioSeleccionado = e.target.id;
-        let episodios = RICKANDMORTY.results.filter((e) => e.episode.includes === episodioSeleccionado);
+        console.log(episodioSeleccionado);
+        let episodios = RICKANDMORTY.results.filter((e) => e.episode.includes("episodioSeleccionado"));
         console.log(episodios);
+
+        /* const episode1 = RICKANDMORTY.results.filter(result => result.episode.includes('https://rickandmortyapi.com/api/episode/1'));
+         */
         document.getElementById("characterGrid").innerHTML = ""
 
         for (let personaje of episodios) {
