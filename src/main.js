@@ -121,7 +121,7 @@ theParent.addEventListener("click", filterBySpecies, false);
 //E.TARGET GENDER
 
 import { filterByGender } from './data.js'
-console.log(filterByGender);
+
 
 let theParentGender = document.querySelector("#listaGeneros")
 theParentGender.addEventListener("click", (e) => {
@@ -130,6 +130,10 @@ theParentGender.addEventListener("click", (e) => {
 
 document.getElementById("characterGrid").innerHTML = ""
 
+const generos = (e) => {
+    return (filterByGender(e))
+};
+console.log(generos);
 
 /* let generos = RICKANDMORTY.results.filter((e) => e.gender === generoSeleccionado); */
 
