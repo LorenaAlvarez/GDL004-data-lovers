@@ -198,12 +198,26 @@ h5 {
 }
 
 h5::-webkit-scrollbar {
-    display: none;
+    display: block;
+    height: 10px;
+}
+
+h5::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+h5::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 28, 115, 0.8);
+    width: 1px;
 }
 
 
-/*GENDER*/
+}
+h5::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 28, 115, 1);
+}
 
+/*GENDER*/
 h3 {
     justify-content: center;
     text-align: center;
@@ -211,9 +225,7 @@ h3 {
     font-size: 4vh;
 }
 
-
 /*SPECIES*/
-
 h4 {
     justify-content: center;
     text-align: center;
@@ -221,9 +233,7 @@ h4 {
     font-size: 4vh;
 }
 
-
 /*IMAGEN DE PERSONAJE*/
-
 img {
     width: 18vw;
     display: block;
@@ -231,13 +241,10 @@ img {
     margin-right: auto;
 }
 
-
 /*BOTONES */
-
 #buttons {
     display: none;
 }
-
 .abc {
     background-color: transparent;
     border: transparent;
@@ -245,14 +252,12 @@ img {
     color: white;
     padding: 1% 1% 1%;
 }
-
 #letras {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     width: 100%;
 }
-
 .abc:hover {
     color: rgba(156, 28, 115, 1);
     font-weight: bolder;
@@ -260,31 +265,24 @@ img {
     cursor: pointer;
 }
 
-
 /*DROPDOWN STYLE*/
 
-
 /*funcionalidad*/
-
 .multi-level,
 .item ul,
 .nav input[type="checkbox"] {
     display: none;
 }
-
 #menu:checked~.multi-level,
 .item input:checked~ul {
     display: block;
 }
-
 #menu:checked~#nav-icon {
     color: rgba(156, 28, 115, 1);
     text-shadow: 2px 2px #F2BEA0;
 }
 
-
 /*arrow*/
-
 .arrow {
     width: 30px;
     height: 30px;
@@ -292,31 +290,25 @@ img {
     float: left;
     z-index: 0;
 }
-
 .item input+.arrow {
     transform: rotate(90deg);
     transition: 0.1s;
 }
-
 .item input:checked+.arrow {
     transform: rotate(0deg);
     transition: 0.1s;
 }
 
-
 /*styles*/
-
 label:hover {
     cursor: pointer;
 }
-
 label {
     width: 100%;
     display: block;
     z-index: 3;
     position: relative;
 }
-
 #nav-icon {
     font-size: 3.5vh;
     width: 10%;
@@ -326,19 +318,16 @@ label {
     color: white;
     background-color: transparent;
 }
-
 #nav-icon:hover {
     color: rgba(156, 28, 115, 1);
     text-shadow: 2px 2px #F2BEA0;
 }
-
 .nav {
     width: 20vw;
     float: left;
     position: absolute;
     z-index: 2;
 }
-
 .nav ul,
 .nav li,
 label {
@@ -352,11 +341,9 @@ label {
     color: white;
     font-weight: 100;
 }
-
 .item ul li {
     padding: 0 2vh;
 }
-
 .nav li a {
     line-height: 2vh;
     margin: 0;
