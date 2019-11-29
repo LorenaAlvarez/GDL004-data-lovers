@@ -1,19 +1,17 @@
-# Data Lovers
+![](src/imgs/logo.png)
+
+# Data Lovers: nombre del proyecto
 
 ## Índice
-
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Avances Esperados](#5-avances-esperados)
-* [6. Hacker Edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+* [1. Definición del producto](#1-Definición-del-producto)
+* [2. Historias de Usuario](#1-Historias-de-Usuario)
+* [3. Prototipo de baja fidelidad](#3-Prototipo-de-baja-fidelidad)
+* [4. Prototipo de Alta fidelidad](#4-Prototipo-de-alta-fidelidad)
+* [5. Testeos de Usabilidad](#5-Testeos-de-Usabilidad)
 
 ***
 
-## 1. Preámbulo
+## 1. Definición del proyecto.
 
 Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
 el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
@@ -33,7 +31,7 @@ para el usuario.
 \* Puedes ver el detalle de la data en este [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
 y la interfaz construida en este [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
 
-## 2. Resumen del proyecto
+## 2. Historias de usuario.
 
 En este proyecto **construirás una _página web_ para visualizar un
 _conjunto (set) de datos_** que se adecúe a lo que tu usuario necesita.
@@ -72,7 +70,7 @@ posible para ayudarle a satisfacer sus necesidades.
   Morty. Puedes revisar la documentación de su API en este [link](https://rickandmortyapi.com).
 
 
-## 3. Objetivos de aprendizaje
+## 3. Prototipo de baja fidelidad.
 
 El objetivo principal de este proyecto es que, entendiendo las necesidades de
 tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda
@@ -126,14 +124,14 @@ y de equipo.
 - [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
 - [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
 
-## 4. Consideraciones generales
+## 4. Prototipo de alta fidelidad.
 
 * Este proyecto se debe resolver en duplas.
 * El proyecto será entregado subiendo tu código a GitHub (`commit`/`push`) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
 * Para este proyecto tendremos 2 Sprints.
 
-## 5. Avances Esperados
+## 5. Testeos de usabilidad.
 
 
 ### Definición del producto

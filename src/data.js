@@ -17,20 +17,29 @@ let manager = {
 
 //FILTER SPECIES -- AQUI DEBE IR EL CODIGO DE LA FUNCIONALIDAD
 
+const filterByGender = (e) => {
+    if (e.target !== e.currentTarget) {
+        let generoSeleccionado = e.target.id;
+        let generos = RICKANDMORTY.results.filter((e) => e.gender === generoSeleccionado);
+        return generos;
+    }
+};
+
+export { filterByGender };
 
 
 
 //FILTER GENDER
 
 
-//FILTER EPISODE
 
-// YA FUNCIONA! :)
+//FILTER EPISODE SEASON 1
 
 
-/* const episode1 = RICKANDMORTY.results.filter(result => result.episode.includes('https://rickandmortyapi.com/api/episode/1'));
- */
+//FILTER EPISODE SEASON 2
 
+
+//FILTER EPISODE SEASON 3
 
 
 
