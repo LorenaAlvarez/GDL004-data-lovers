@@ -17,8 +17,8 @@ describe('manager', () => {
 });
 
 describe('Femeninos', () => {
-    let generoSeleccionado = "Female"
-    let response = filterByGender(generoSeleccionado)
+    let generoSeleccionadoFem = "Female"
+    let response = filterByGender(generoSeleccionadoFem)
 
     it('debería retornar el filtro de genero femenino', () => {
         expect(response[0].name).toBe('Summer Smith')
@@ -26,29 +26,42 @@ describe('Femeninos', () => {
 
 });
 
-// const filterByGender = (e) => {
-//   if (e.target !== e.currentTarget) {
-//       let generoSeleccionado = e.target.id;
-//       let generos = RICKANDMORTY.results.filter((e) => e.gender === generoSeleccionado)
-//       return generos
-//   }
-// };
+describe('Masculinos', () => {
+    let generoSeleccionadoMale = "Male"
+    let response = filterByGender(generoSeleccionadoMale)
 
+    it('debería retornar el filtro de genero masculino', () => {
+        expect(response[0].name).toBe('Rick Sanchez')
+    });
 
+});
 
+describe('Unknown', () => {
+    let generoSeleccionado = "unknown"
+    let response = filterByGender(generoSeleccionado)
 
-// describe('males', () => {
+    it('debería retornar el filtro de genero desconocido', () => {
+        expect(response[0].name).toBe('Alien Googah')
+    });
 
-//     it('debería retornar el filtro de genero masculino', () => {
-//         expect(males[0].name).toBe('Rick Sanchez')
-//     });
+});
 
-// });
+describe('Especies', () => {
+    let especieSeleccionada = "Alien"
+    let response = filterBySpecies(especieSeleccionada)
 
-// describe('unknown', () => {
+    it('debería retornar el filtro de especie Alien', () => {
+        expect(response[0].name).toBe('Abadango Cluster Princess')
+    });
 
-//     it('debería retornar el filtro de genero desconocido', () => {
-//         expect(unknowns[0].name).toBe('Alien Googah')
-//     });
+});
 
-// });
+describe('Episodios Temp 1', () => {
+    let episodioSeleccionado = "https://rickandmortyapi.com/api/episode/27"
+    let response = filterByEpisodeThird(episodioSeleccionado)
+
+    it('debería retornar el personaje numero 6 del episodio 27', () => {
+        expect(response[5].name).toBe('Father Bob')
+    });
+
+});

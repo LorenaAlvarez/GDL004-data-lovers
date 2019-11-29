@@ -4,7 +4,13 @@ import {
     sortGe,
     sortSp,
     sortName,
-    sortID
+    sortID,
+    manager,
+    filterBySpecies,
+    filterByGender,
+    filterByEpisode,
+    filterByEpisodeSecond,
+    filterByEpisodeThird
 } from './data.js'
 
 
@@ -52,7 +58,6 @@ for (let personaje of RICKANDMORTY.results) {
         personaje.species + '</h4>';
 
     document.getElementById('characterGrid').appendChild(template);
-    // Mostrar solo los primeros 15
 
 };
 
@@ -66,7 +71,7 @@ for (let i = 0; i < abc.length; i++) {
     abc[i].addEventListener("click", function() {
         let letraFiltro = abc[i].textContent.slice(0, 1)
         let resultados = manager.filterData({ data: RICKANDMORTY, letraFiltro: letraFiltro }, "filtroLetras");
-        /* debugger */
+
         document.getElementById("characterGrid").innerHTML = ""
 
         for (let personaje of resultados) {
@@ -90,12 +95,11 @@ for (let i = 0; i < abc.length; i++) {
 
 //E.TARGET ESPECIES
 
-import { filterBySpecies } from './data.js'
 let species = [];
 
 let theParentSp = document.querySelector("#listaEspecies")
 theParentSp.addEventListener("click", (e) => {
-    species = filterBySpecies(e)
+    species = filterBySpecies(e.target.name)
 
     document.getElementById("characterGrid").innerHTML = ""
 
@@ -114,17 +118,15 @@ theParentSp.addEventListener("click", (e) => {
         document.getElementById('characterGrid').appendChild(template);
     };
 
-    console.log(species, 'dentro') //CONSOLEA EL RESULTADO
 }, false);
 
 
 //E.TARGET GENDER
-import { filterByGender } from './data.js'
 let generos = [];
 
 let theParentGender = document.querySelector("#listaGeneros")
 theParentGender.addEventListener("click", (e) => {
-    generos = filterByGender(e)
+    generos = filterByGender(e.target.id)
 
     document.getElementById("characterGrid").innerHTML = ""
 
@@ -143,19 +145,17 @@ theParentGender.addEventListener("click", (e) => {
         document.getElementById('characterGrid').appendChild(template);
     };
 
-    console.log(generos, 'dentro') //CONSOLEA EL RESULTADO
 }, false);
 
 
 
 
 //E.TARGET EPISODE FIRST SEASON
-import { filterByEpisode } from './data.js'
 let episodios = [];
 
 let theParentEpOne = document.querySelector("#listaEpisodiosUno")
 theParentEpOne.addEventListener("click", (e) => {
-    episodios = filterByEpisode(e)
+    episodios = filterByEpisode(e.target.id)
 
     document.getElementById("characterGrid").innerHTML = ""
 
@@ -174,16 +174,14 @@ theParentEpOne.addEventListener("click", (e) => {
         document.getElementById('characterGrid').appendChild(template);
     };
 
-    console.log(episodios, 'dentro') //CONSOLEA EL RESULTADO
 }, false);
 
 //E.TARGET EPISODE SECOND SEASON
-import { filterByEpisodeSecond } from './data.js'
 let episodiosDos = [];
 
 let theParentEpTwo = document.querySelector("#listaEpisodiosDos")
 theParentEpTwo.addEventListener("click", (e) => {
-    episodiosDos = filterByEpisodeSecond(e)
+    episodiosDos = filterByEpisodeSecond(e.target.id)
 
     document.getElementById("characterGrid").innerHTML = ""
 
@@ -202,16 +200,15 @@ theParentEpTwo.addEventListener("click", (e) => {
         document.getElementById('characterGrid').appendChild(template);
     };
 
-    console.log(episodiosDos, 'dentro') //CONSOLEA EL RESULTADO
+
 }, false);
 
 //E.TARGET EPISODE THIRD SEASON
-import { filterByEpisodeThird } from './data.js'
 let episodiosTres = [];
 
 let theParentEpTres = document.querySelector("#listaEpisodiosTres")
 theParentEpTres.addEventListener("click", (e) => {
-    episodiosTres = filterByEpisodeThird(e)
+    episodiosTres = filterByEpisodeThird(e.target.id)
 
     document.getElementById("characterGrid").innerHTML = ""
 
@@ -230,11 +227,8 @@ theParentEpTres.addEventListener("click", (e) => {
         document.getElementById('characterGrid').appendChild(template);
     };
 
-    console.log(episodiosTres, 'dentro') //CONSOLEA EL RESULTADO
+
 }, false);
-
-
-
 
 
 

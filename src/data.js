@@ -14,63 +14,39 @@ let manager = {
     }
 }
 
+//FILTER SPECIES 
 
-//FILTER SPECIES -- AQUI DEBE IR EL CODIGO DE LA FUNCIONALIDAD
+const filterBySpecies = (especieSeleccionada) => {
+    let species = RICKANDMORTY.results.filter((e) => e.species === especieSeleccionada)
+    return species
 
-const filterBySpecies = (e) => {
-    if (e.target !== e.currentTarget) {
-        let especieSeleccionada = e.target.name;
-        let species = RICKANDMORTY.results.filter((e) => e.species === especieSeleccionada)
-        return species
-    }
 };
-export { filterBySpecies };
-
-//FUNCIONES QUE SE ESTAN PROBANDO
-// const females = RICKANDMORTY.results.filter((female) => female.gender === "Female");
-// const males = RICKANDMORTY.results.filter((male) => male.gender === "Male");
-// const unknowns = RICKANDMORTY.results.filter((unk) => unk.gender === "unknown");
 
 //FILTER GENDER
-const filterByGender = (e) => {
-    if (e.target !== e.currentTarget) {
-        let generoSeleccionado = e.target.id;
-        let generos = RICKANDMORTY.results.filter((e) => e.gender === generoSeleccionado)
-        return generos
-    }
+const filterByGender = (generoSeleccionado) => {
+    let generos = RICKANDMORTY.results.filter((e) => e.gender === generoSeleccionado)
+    return generos
 };
-export { filterByGender };
 
 
 //FILTER EPISODE SEASON 1
-const filterByEpisode = (e) => {
-    if (e.target !== e.currentTarget) {
-        let episodioSeleccionado = e.target.id;
-        let episodios = RICKANDMORTY.results.filter((e) => e.episode.includes(episodioSeleccionado));
-        return episodios
-    }
+const filterByEpisode = (episodioSeleccionado) => {
+    let episodios = RICKANDMORTY.results.filter((e) => e.episode.includes(episodioSeleccionado));
+    return episodios
 };
-export { filterByEpisode };
 
 //FILTER EPISODE SEASON 2
-const filterByEpisodeSecond = (e) => {
-    if (e.target !== e.currentTarget) {
-        let episodioSeleccionadoDos = e.target.id;
-        let episodiosDos = RICKANDMORTY.results.filter((e) => e.episode.includes(episodioSeleccionadoDos));
-        return episodiosDos
-    }
+const filterByEpisodeSecond = (episodioSeleccionadoDos) => {
+    let episodiosDos = RICKANDMORTY.results.filter((e) => e.episode.includes(episodioSeleccionadoDos));
+    return episodiosDos
+
 };
-export { filterByEpisodeSecond };
 
 //FILTER EPISODE SEASON 3
-const filterByEpisodeThird = (e) => {
-    if (e.target !== e.currentTarget) {
-        let episodioSeleccionadoTres = e.target.id;
-        let episodiosTres = RICKANDMORTY.results.filter((e) => e.episode.includes(episodioSeleccionadoTres));
-        return episodiosTres
-    }
+const filterByEpisodeThird = (episodioSeleccionadoTres) => {
+    let episodiosTres = RICKANDMORTY.results.filter((e) => e.episode.includes(episodioSeleccionadoTres));
+    return episodiosTres
 };
-export { filterByEpisodeThird };
 
 //SORT BY NAME
 let arr = RICKANDMORTY.results;
@@ -107,5 +83,10 @@ export {
     sortSp,
     sortEp,
     sortID,
-    manager
+    manager,
+    filterBySpecies,
+    filterByGender,
+    filterByEpisode,
+    filterByEpisodeSecond,
+    filterByEpisodeThird
 }
