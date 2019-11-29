@@ -1,4 +1,4 @@
-import { manager, females, males, unknown } from "../src/data";
+import { manager, filterByGender, filterBySpecies, filterByEpisode, filterByEpisodeSecond, filterByEpisodeThird } from "../src/data";
 import RICKANDMORTY from '../src/data/rickandmorty/rickandmorty.js'
 
 describe('manager', () => {
@@ -16,26 +16,27 @@ describe('manager', () => {
 
 });
 
-describe('females', () => {
+describe('Femeninos', () => {
+    let response = filterByGender(Female)
 
     it('debería retornar el filtro de genero femenino', () => {
-        expect(females[0].name).toBe('Summer Smith')
+        expect(response[0].name).toBe('Summer Smith')
     });
 
 });
 
-describe('males', () => {
+// describe('males', () => {
 
-    it('debería retornar el filtro de genero masculino', () => {
-        expect(males[0].name).toBe('Rick Sanchez')
-    });
+//     it('debería retornar el filtro de genero masculino', () => {
+//         expect(males[0].name).toBe('Rick Sanchez')
+//     });
 
-});
+// });
 
-describe('unknown', () => {
+// describe('unknown', () => {
 
-    it('debería retornar el filtro de genero desconocido', () => {
-        expect(males[0].name).toBe('Alien Googah')
-    });
+//     it('debería retornar el filtro de genero desconocido', () => {
+//         expect(unknowns[0].name).toBe('Alien Googah')
+//     });
 
-});
+// });

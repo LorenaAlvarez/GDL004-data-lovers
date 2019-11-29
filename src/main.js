@@ -90,156 +90,150 @@ for (let i = 0; i < abc.length; i++) {
 
 //E.TARGET ESPECIES
 
-const filterBySpecies = (e) => {
-    if (e.target !== e.currentTarget) {
-        let especieSeleccionada = e.target.name;
-        let species = RICKANDMORTY.results.filter((e) => e.species === especieSeleccionada);
+import { filterBySpecies } from './data.js'
+let species = [];
 
-        document.getElementById("characterGrid").innerHTML = ""
+let theParentSp = document.querySelector("#listaEspecies")
+theParentSp.addEventListener("click", (e) => {
+    species = filterBySpecies(e)
 
-        for (let personaje of species) {
-            const template = document.createElement('div');
-            template.classList.add('personaje');
-            template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-                '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-                personaje.episode.map(v => {
-                    if (v.length === 41) {
-                        return v.slice(-1)
-                    } else { return v.slice(-2) }
-                }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-                personaje.species + '</h4>';
+    document.getElementById("characterGrid").innerHTML = ""
 
-            document.getElementById('characterGrid').appendChild(template);
-        }
-    }
-};
+    for (let personaje of species) {
+        const template = document.createElement('div');
+        template.classList.add('personaje');
+        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
+            personaje.species + '</h4>';
 
-let theParent = document.querySelector("#listaEspecies")
-theParent.addEventListener("click", filterBySpecies, false);
+        document.getElementById('characterGrid').appendChild(template);
+    };
+
+    console.log(species, 'dentro') //CONSOLEA EL RESULTADO
+}, false);
 
 
 //E.TARGET GENDER
-
 import { filterByGender } from './data.js'
-
+let generos = [];
 
 let theParentGender = document.querySelector("#listaGeneros")
 theParentGender.addEventListener("click", (e) => {
-    console.log(filterByGender(e))
+    generos = filterByGender(e)
+
+    document.getElementById("characterGrid").innerHTML = ""
+
+    for (let personaje of generos) {
+        const template = document.createElement('div');
+        template.classList.add('personaje');
+        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
+            personaje.species + '</h4>';
+
+        document.getElementById('characterGrid').appendChild(template);
+    };
+
+    console.log(generos, 'dentro') //CONSOLEA EL RESULTADO
 }, false);
 
-document.getElementById("characterGrid").innerHTML = ""
-
-const generos = (e) => {
-    return (filterByGender(e))
-};
-console.log(generos);
-
-/* let generos = RICKANDMORTY.results.filter((e) => e.gender === generoSeleccionado); */
-
-// for (let personaje of generos) {
-//     const template = document.createElement('div');
-//     template.classList.add('personaje');
-//     template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-//         '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-//         personaje.episode.map(v => {
-//             if (v.length === 41) {
-//                 return v.slice(-1)
-//             } else { return v.slice(-2) }
-//         }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-//         personaje.species + '</h4>';
-
-//     document.getElementById('characterGrid').appendChild(template);
-// };
 
 
 
 //E.TARGET EPISODE FIRST SEASON
+import { filterByEpisode } from './data.js'
+let episodios = [];
 
-const filterByEpisode = (e) => {
-    if (e.target !== e.currentTarget) {
-        let episodioSeleccionado = e.target.id;
-        let episodios = RICKANDMORTY.results.filter((e) => e.episode.includes(episodioSeleccionado));
+let theParentEpOne = document.querySelector("#listaEpisodiosUno")
+theParentEpOne.addEventListener("click", (e) => {
+    episodios = filterByEpisode(e)
 
-        document.getElementById("characterGrid").innerHTML = ""
+    document.getElementById("characterGrid").innerHTML = ""
 
-        for (let personaje of episodios) {
-            const template = document.createElement('div');
-            template.classList.add('personaje');
-            template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-                '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-                personaje.episode.map(v => {
-                    if (v.length === 41) {
-                        return v.slice(-1)
-                    } else { return v.slice(-2) }
-                }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-                personaje.species + '</h4>';
+    for (let personaje of episodios) {
+        const template = document.createElement('div');
+        template.classList.add('personaje');
+        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
+            personaje.species + '</h4>';
 
-            document.getElementById('characterGrid').appendChild(template);
-        }
-    }
-};
+        document.getElementById('characterGrid').appendChild(template);
+    };
 
-let theParentEpisode = document.querySelector("#listaEpisodiosUno")
-theParentEpisode.addEventListener("click", filterByEpisode, false);
+    console.log(episodios, 'dentro') //CONSOLEA EL RESULTADO
+}, false);
 
 //E.TARGET EPISODE SECOND SEASON
+import { filterByEpisodeSecond } from './data.js'
+let episodiosDos = [];
 
-const filterByEpisodeSecond = (e) => {
-    if (e.target !== e.currentTarget) {
-        let episodioSeleccionadoDos = e.target.id;
-        let episodiosDos = RICKANDMORTY.results.filter((e) => e.episode.includes(episodioSeleccionadoDos));
+let theParentEpTwo = document.querySelector("#listaEpisodiosDos")
+theParentEpTwo.addEventListener("click", (e) => {
+    episodiosDos = filterByEpisodeSecond(e)
 
-        document.getElementById("characterGrid").innerHTML = ""
+    document.getElementById("characterGrid").innerHTML = ""
 
-        for (let personaje of episodiosDos) {
-            const template = document.createElement('div');
-            template.classList.add('personaje');
-            template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-                '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-                personaje.episode.map(v => {
-                    if (v.length === 41) {
-                        return v.slice(-1)
-                    } else { return v.slice(-2) }
-                }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-                personaje.species + '</h4>';
+    for (let personaje of episodiosDos) {
+        const template = document.createElement('div');
+        template.classList.add('personaje');
+        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
+            personaje.species + '</h4>';
 
-            document.getElementById('characterGrid').appendChild(template);
-        }
-    }
-};
+        document.getElementById('characterGrid').appendChild(template);
+    };
 
-let theParentEpisodeTwo = document.querySelector("#listaEpisodiosDos")
-theParentEpisodeTwo.addEventListener("click", filterByEpisodeSecond, false);
+    console.log(episodiosDos, 'dentro') //CONSOLEA EL RESULTADO
+}, false);
 
 //E.TARGET EPISODE THIRD SEASON
+import { filterByEpisodeThird } from './data.js'
+let episodiosTres = [];
 
-const filterByEpisodeThird = (e) => {
-    if (e.target !== e.currentTarget) {
-        let episodioSeleccionadoTres = e.target.id;
-        let episodiosTres = RICKANDMORTY.results.filter((e) => e.episode.includes(episodioSeleccionadoTres));
+let theParentEpTres = document.querySelector("#listaEpisodiosTres")
+theParentEpTres.addEventListener("click", (e) => {
+    episodiosTres = filterByEpisodeThird(e)
 
-        document.getElementById("characterGrid").innerHTML = ""
+    document.getElementById("characterGrid").innerHTML = ""
 
-        for (let personaje of episodiosTres) {
-            const template = document.createElement('div');
-            template.classList.add('personaje');
-            template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
-                '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
-                personaje.episode.map(v => {
-                    if (v.length === 41) {
-                        return v.slice(-1)
-                    } else { return v.slice(-2) }
-                }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
-                personaje.species + '</h4>';
+    for (let personaje of episodiosTres) {
+        const template = document.createElement('div');
+        template.classList.add('personaje');
+        template.innerHTML = '<img src="' + personaje.image + '"><h1>' + "Name: " + '<br>' + personaje.name +
+            '</h1>' + '<h2>' + " Appears in episode: " + '</h2>' + '<h5>' +
+            personaje.episode.map(v => {
+                if (v.length === 41) {
+                    return v.slice(-1)
+                } else { return v.slice(-2) }
+            }) + '</h5>' + '<h3>' + "Gender: " + '<br>' + personaje.gender + '</h3>' + '<h4>' + " Species: " + '<br>' +
+            personaje.species + '</h4>';
 
-            document.getElementById('characterGrid').appendChild(template);
-        }
-    }
-};
+        document.getElementById('characterGrid').appendChild(template);
+    };
 
-let theParentEpisodeThree = document.querySelector("#listaEpisodiosTres")
-theParentEpisodeThree.addEventListener("click", filterByEpisodeThird, false);
+    console.log(episodiosTres, 'dentro') //CONSOLEA EL RESULTADO
+}, false);
+
+
 
 
 
