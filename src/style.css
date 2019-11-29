@@ -254,8 +254,8 @@ img {
 }
 #letras {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 }
 .abc:hover {
@@ -323,7 +323,7 @@ label {
     text-shadow: 2px 2px #F2BEA0;
 }
 .nav {
-    width: 20vw;
+    width: 16vw;
     float: left;
     position: absolute;
     z-index: 2;
@@ -337,7 +337,7 @@ label {
     list-style: none;
     text-decoration: none;
     background-color: rgba(156, 28, 115, 0.6);
-    width: 100%;
+    width: 60%;
     color: white;
     font-weight: 100;
 }
