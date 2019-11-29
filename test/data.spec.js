@@ -17,13 +17,25 @@ describe('manager', () => {
 });
 
 describe('Femeninos', () => {
-    let response = filterByGender(Female)
+    let generoSeleccionado = "Female"
+    let response = filterByGender(generoSeleccionado)
 
     it('debería retornar el filtro de genero femenino', () => {
         expect(response[0].name).toBe('Summer Smith')
     });
 
 });
+
+// const filterByGender = (e) => {
+//   if (e.target !== e.currentTarget) {
+//       let generoSeleccionado = e.target.id;
+//       let generos = RICKANDMORTY.results.filter((e) => e.gender === generoSeleccionado)
+//       return generos
+//   }
+// };
+
+
+
 
 // describe('males', () => {
 
