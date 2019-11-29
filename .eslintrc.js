@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     'jest/globals': true,
   },
-  globals: {
+   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
     firebase: 'readonly',

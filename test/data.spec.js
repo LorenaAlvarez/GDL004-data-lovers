@@ -35,7 +35,7 @@ describe('males', () => {
 describe('unknown', () => {
 
   it('debería retornar el filtro de genero desconocido', () => {
-    expect(males[0].name).toBe('Alien Googah')
+    expect(unknown[0].name).toBe('Alien Googah')
   });
 
 });
