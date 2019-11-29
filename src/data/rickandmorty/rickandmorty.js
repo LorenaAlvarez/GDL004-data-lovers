@@ -3157,7 +3157,7 @@ export default {
         },
         {
             id: 136,
-            name: "Gazorpazorpfield",
+            name: "Gazorpa zorpfield",
             status: "Alive",
             species: "Alien",
             type: "Gazorpian",
@@ -7177,7 +7177,7 @@ export default {
         },
         {
             id: 315,
-            name: "Shmlangela Shmlobinson-Shmlower",
+            name: "Shmlangela Shmlobinson -Shmlower",
             status: "Alive",
             species: "Human",
             type: "",
