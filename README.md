@@ -28,15 +28,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## 3. Prototipo de baja fidelidad.
 
-![](src/imgs/prototipoBF.png)
+![](src/imgs/prototipoBF.jpeg)
 
 
 ## 4. Prototipo de alta fidelidad.
 
-![](src/imgs/prototipoAF4.png)
-![](src/imgs/prototipoAF3.png)
-![](src/imgs/prototipoAF2.png)
-![](src/imgs/prototipoAF1.png)
+![](src/imgs/prototipoAF4.jpeg)
+![](src/imgs/prototipoAF3.jpeg)
+![](src/imgs/prototipoAF2.jpeg)
+![](src/imgs/prototipoAF1.jpeg)
 
 
 
