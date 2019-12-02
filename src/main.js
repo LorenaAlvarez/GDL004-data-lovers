@@ -28,8 +28,8 @@ var mybutton = document.getElementById('myBtn');
 window.onscroll = function() { scrollFunction() };
 
 function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
 
 document.getElementById('myBtn').addEventListener('click', topFunction)
@@ -321,3 +321,4 @@ document.getElementById("sortID").addEventListener("click", function() {
         document.getElementById('characterGrid').appendChild(template);
     }
 })
+
