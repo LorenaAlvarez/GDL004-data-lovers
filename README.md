@@ -1,6 +1,6 @@
 ![](src/imgs/logo.png)
 
-# Data Lovers: nombre del proyecto
+# Data Lovers: 'The Rick and Morty Character Web'
 
 ## Índice
 * [1. Definición del producto](#1-Definición-del-producto)
@@ -13,32 +13,31 @@
 
 ## 1. Definición del proyecto.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-
+'The Rick and Morty Character Web' fue diseñada para que los fans de Rick and Morty puedan saber en que episodio aparecen sus personajes favoritos, además de obtener más datos sobre ellos como género y especie. 
+El usuario principal son jóvenes (+18), fans de Rick and Morty, que quieren saber más sobre su serie favorita y poder ver el episodio donde aparece su personaje favorito.
 
 
 ## 2. Historias de usuario.
 
-### Yo como: 
+#### Yo como: 
 Usuario de la página R&M
-### Quiero:
+#### Quiero:
 Saber de que se trata la pagina
-### Para:
+#### Para:
 Saber si quiero utilizarla
-#### Criterios de Aceptación
+##### Criterios de Aceptación
 - La web de R&M debe contener una página de inicio.
 - El usuario debe presionar el botón de iniciar para entrar a la página de los personajes.
 
 
-
-### Yo como:
+#### Yo como:
 Fan de Rick & Morty
-### Quiero:
+#### Quiero:
 Conocer el nombre, genero y especie de los personajes
-### Para:
+#### Para:
 Divertirme y aprender más sobre ellos
 
-#### Criterios de Aceptación
+##### Criterios de Aceptación
 - La página debe permitir al usuario visualizar los nombres de los personajes.
 - La página debe permitir al usuario visualizar los generos de los personajes.
 - La página debe permitir al usuario visualizar las especies de los personajes.
@@ -47,20 +46,19 @@ Divertirme y aprender más sobre ellos
 - La página debe mostrar una imagen del personaje.
 
 
-
-### Yo como:
+#### Yo como:
 Usuario de la página R&M
-### Quiero:
+#### Quiero:
 Conocer en que episodio se presenta un personaje "x"
-### Para:
+#### Para:
 Poder ver el episodio donde sale mi personaje favorito.
 
-#### Criterios de Aceptación
+##### Criterios de Aceptación
 - La página debe permitir al usuario visualizar en que episodio aparecen los personajes.
 - La página debe permitir al usuario filtrar los personajes por episodio.
 
 
-### Definición de Terminado
+### Definición de Terminado Del Proyecto
 - Código Completado
 - Código Revisado
 - Test unitarios pasados
@@ -85,7 +83,14 @@ Poder ver el episodio donde sale mi personaje favorito.
 
 ## 5. Testeos de usabilidad.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Se realizaron diferentes testeos de usabilidad, tanto con personas dentro de Laboratoria como por fuera.
+El feedback recibido nos ayudó a modificar los siguientes aspectos de nuestro proyecto.
+
+- Interfaz de colores distintos, a pesar de que eran los de la paleta, se veían con un contraste alto, lo cual dificultaba la lectura de los datos.
+- Menú "on top" de los personajes, para no generar un desplazamiento innecesario y facilitar el uso del proyecto.
+- Centrar el "grid".
+- Imagen más grande para cada uno de los personajes.
+- Fondo más neutro, que no contenga tantas imagenes para facilitar que el contenido sea más legible.
 
 
 
