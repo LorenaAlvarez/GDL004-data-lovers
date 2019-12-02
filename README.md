@@ -19,25 +19,25 @@ El usuario principal son jóvenes (+18), fans de Rick and Morty, que quieren sab
 
 ## 2. Historias de usuario.
 
+### Historia 1
 #### Yo como: 
 Usuario de la página R&M
 #### Quiero:
 Saber de que se trata la pagina
 #### Para:
 Saber si quiero utilizarla
-##### Criterios de Aceptación
+##### Criterios de Aceptación de la HU
 - La web de R&M debe contener una página de inicio.
 - El usuario debe presionar el botón de iniciar para entrar a la página de los personajes.
 
-
+### Historia 2
 #### Yo como:
 Fan de Rick & Morty
 #### Quiero:
 Conocer el nombre, genero y especie de los personajes
 #### Para:
 Divertirme y aprender más sobre ellos
-
-##### Criterios de Aceptación
+##### Criterios de Aceptación de la HU
 - La página debe permitir al usuario visualizar los nombres de los personajes.
 - La página debe permitir al usuario visualizar los generos de los personajes.
 - La página debe permitir al usuario visualizar las especies de los personajes.
@@ -45,17 +45,18 @@ Divertirme y aprender más sobre ellos
 - La página debe permitir al usuario filtrar los personajes por especie.
 - La página debe mostrar una imagen del personaje.
 
-
+### Historia 3
 #### Yo como:
 Usuario de la página R&M
 #### Quiero:
 Conocer en que episodio se presenta un personaje "x"
 #### Para:
 Poder ver el episodio donde sale mi personaje favorito.
-
-##### Criterios de Aceptación
+##### Criterios de Aceptación de la HU
 - La página debe permitir al usuario visualizar en que episodio aparecen los personajes.
 - La página debe permitir al usuario filtrar los personajes por episodio.
+
+
 
 
 ### Definición de Terminado Del Proyecto
