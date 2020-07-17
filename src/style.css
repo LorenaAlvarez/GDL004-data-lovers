@@ -367,7 +367,7 @@ label {
 .nav {
     width: 16vw;
     float: left;
-    position: absolute;
+    position: fixed;
     z-index: 2;
 }
 

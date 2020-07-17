@@ -56,17 +56,6 @@ Poder ver el episodio donde sale mi personaje favorito.
 - La página debe permitir al usuario visualizar en que episodio aparecen los personajes.
 - La página debe permitir al usuario filtrar los personajes por episodio.
 
-
-
-
-### Definición de Terminado Del Proyecto
-- Código Completado
-- Código Revisado
-- Test unitarios pasados
-- Test funcionales pasados
-- Nada en backlog
-
-
 ## 3. Prototipo de baja fidelidad.
 
 ![](src/imgs/prototipoBF.jpeg)
